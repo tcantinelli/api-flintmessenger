@@ -2,6 +2,8 @@ import express, { Request, Response, ErrorRequestHandler } from 'express';
 import morgan from "morgan";
 import helmet from "helmet";
 import { configuration, IConfig } from "./config";
+import profileRoutes from './routes/profileRoute';
+import { connect } from './database';
 
 export function createExpressApp(config: IConfig): express.Express {
   const { express_debug } = config;
@@ -14,9 +16,10 @@ export function createExpressApp(config: IConfig): express.Express {
 
   app.use(((err, _req, res, _next) => {
     console.error(err.stack);
-    res.status?.(500).send(!express_debug ? 'Oups' : err);
+    res.status(500).send(!express_debug ? 'Oups' : err);
   }) as ErrorRequestHandler);
 
+  app.use('/profile', profileRoutes)
   app.get('/', (req: Request, res: Response) => { res.send('This is the boilerplate for Flint Messenger app') });
 
   return app;
@@ -25,4 +28,6 @@ export function createExpressApp(config: IConfig): express.Express {
 const config = configuration();
 const { PORT } = config;
 const app = createExpressApp(config);
-app.listen(PORT, () => console.log(`Flint messenger listening at ${PORT}`));
+connect(config).then(
+  () => { app.listen(PORT, () => console.log(`Flint messenger listening at ${PORT}`)) }
+);
