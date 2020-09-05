@@ -1,4 +1,6 @@
-const Profile = require('../../src/models/profiles');
+const mongoose = require('mongoose');
+// const Profile = require('../../src/models/profiles');
+import { Profile } from '../../src/models/profiles';
 
 const userTest = new Profile({
 	email: "thomas@mail.com",
@@ -8,7 +10,6 @@ const userTest = new Profile({
 
 describe('Profile: GetFullName', () => {
   it("renvoie le prénom et le nom de l'utilisateur", () => {
-	expect(userTest.getFullName()).toBe("Thomas Toto");
-	done();
+	expect(userTest.getFullname()).toBe("Thomas Toto");
   })
 })
