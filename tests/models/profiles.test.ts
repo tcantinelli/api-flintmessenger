@@ -10,4 +10,4 @@ describe('Profile: GetFullName', () => {
   it("renvoie le prénom et le nom de l'utilisateur", () => {
 	expect(userTest.getFullname()).toBe("Thomas Toto");
   });
-})
+});
