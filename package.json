@@ -13,12 +13,15 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "@types/helmet": "0.0.47",
-    "@types/morgan": "^1.9.1",
-    "@types/hapi__joi": "^17.1.2",
     "@types/express": "^4.17.7",
+    "@types/hapi__joi": "^17.1.2",
+    "@types/helmet": "0.0.47",
     "@types/mongoose": "^5.7.36",
-    "jest": "^26.1.0"
+    "@types/morgan": "^1.9.1",
+    "jest": "^26.1.0",
+    "mongodb-memory-server": "^6.6.7",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
   },
   "scripts": {
     "start": "node ./dist/server.js",
@@ -38,5 +41,17 @@
   "bugs": {
     "url": "https://github.com/tcantinelli/RebootJS-Back/issues"
   },
-  "homepage": "https://github.com/tcantinelli/RebootJS-Back#readme"
+  "homepage": "https://github.com/tcantinelli/RebootJS-Back#readme",
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "ignore": [
+      "node_modules"
+    ],
+    "ext": "ts, js, json",
+    "execMap": {
+      "ts": "ts-node"
+    }
+  }
 }
