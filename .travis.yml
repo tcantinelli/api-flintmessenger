@@ -1,11 +1,12 @@
 language: node_js
 node_js: 12
 
-stages: transpile
+stages:
+  - transpile
 
 jobs:
   include:
-    name: transpile
+  - name: transpile
     stage: transpile
     install: npm install
     script: npm run build
