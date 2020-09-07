@@ -7,7 +7,7 @@ const router = Router();
 router.get('/:profileId', (req: Request, res: Response) => {
 	const { profileId } = req.params;
 
-	Profile.findById(profileId, (err, profile) => {
+	Profile.findById(profileId, '-password -__v', (err, profile) => {
 		if (err) res.status(500).send("Il y a eu une erreur serveur");
 		if (profile == null) { res.status(404).send("Il y a eu une erreur"); return; }
 
@@ -28,10 +28,12 @@ router.delete('/:profileId', (req: Request, res: Response) => {
 
 /* CREATE */
 router.post('/', (req: Request, res: Response) => {
-	const { email, firstname, lastname } = req.body;
+	const { email, firstname, lastname, password } = req.body;
 
 	if (email && firstname && lastname) {
 		const newProfile = new Profile({ email: email, firstname: firstname, lastname: lastname })
+
+		newProfile.setPassword(password);
 
 		newProfile.save((err, profile) => {
 			if (err) res.status(500).send('Erreur serveur');
