@@ -9,3 +9,4 @@ jobs:
     - name: transpile
     stage: transpile
     install: npm install
+    script: npm run build
