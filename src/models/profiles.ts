@@ -26,7 +26,7 @@ profileSchema.methods.setPassword = function (password: string) {
 }
 
 profileSchema.methods.verifyPassword = function (password: string) {
-	this.password === SHA256(password).toString();
+	return this.password === SHA256(password).toString();
 }
 
 export const Profile = model<IProfile, Model<IProfile>>("profile", profileSchema);

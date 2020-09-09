@@ -1,10 +1,11 @@
-import { Request, Response, Router } from 'express'
+import { Request, Response, Router } from 'express';
 import { Profile } from '../models/profiles';
+import { authenticationRequired } from '../middlewares/authenticationRequired';
 
 const router = Router();
 
 /* GET */
-router.get('/:profileId', (req: Request, res: Response) => {
+router.get('/:profileId', authenticationRequired, (req: Request, res: Response) => {
 	const { profileId } = req.params;
 
 	Profile.findById(profileId, '-password -__v', (err, profile) => {
@@ -16,7 +17,7 @@ router.get('/:profileId', (req: Request, res: Response) => {
 });
 
 /* DELETE */
-router.delete('/:profileId', (req: Request, res: Response) => {
+router.delete('/:profileId', authenticationRequired, (req: Request, res: Response) => {
 	const { profileId } = req.params;
 
 	Profile.findByIdAndDelete(profileId, (err, profile) => {

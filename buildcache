@@ -452,8 +452,8 @@
         "affectsGlobalScope": false
       },
       "./src/config.ts": {
-        "version": "752946f976a19c36e207e02073937b92d1f84956a3cc0eaa44188dc05f940148",
-        "signature": "9357dbbb9b7cdc3ab9d3703d9b9b78d9245418f7c622212eb9d0e757c50da56f",
+        "version": "3c206e5aac493ff8a6f74ca1aadab0ac7dcc747cd30c30d5e69ca8584f7ec9b2",
+        "signature": "b2075cb5e54a1b6ace2a181adca313d74e57b8b8c719b623c3149592cbfcec6b",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/bson/index.d.ts": {
@@ -526,35 +526,10 @@
         "signature": "29b7786da16200eaf23b5aeb2a1ac1c6e333bf7e221647012d77f832f42a72e2",
         "affectsGlobalScope": false
       },
-      "./node_modules/@types/crypto-js/index.d.ts": {
-        "version": "7eda637d5e9f03a2c6ddf6cd8880e7ac96fa17b048ad05213d18a7813d0c2861",
-        "signature": "7eda637d5e9f03a2c6ddf6cd8880e7ac96fa17b048ad05213d18a7813d0c2861",
-        "affectsGlobalScope": false
-      },
-      "./src/models/profiles.ts": {
-        "version": "8934d6f440929471013bbde55b2ae8dc7323c93280c9932f3bc6cb754db7faf1",
-        "signature": "0345486e9a3ea296205fa37274fbfc157316831b87a5000da58caaad0fd78298",
-        "affectsGlobalScope": false
-      },
-      "./src/routes/profileroute.ts": {
-        "version": "bbadb4ff45b4b8b2689a08cc8e507423d8033578a565f506db5cd8af30dac8ea",
-        "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
-        "affectsGlobalScope": false
-      },
       "./node_modules/@types/passport/index.d.ts": {
         "version": "f640cdd17b26d4ecaf98f17d90e012b25a29676e30149ef26f02572159cb325a",
         "signature": "f640cdd17b26d4ecaf98f17d90e012b25a29676e30149ef26f02572159cb325a",
         "affectsGlobalScope": true
-      },
-      "./src/routes/loginroutes.ts": {
-        "version": "7e3b416a647c87f2812fba339ef003108380126936263f56b34a693378649fe8",
-        "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
-        "affectsGlobalScope": false
-      },
-      "./src/server.ts": {
-        "version": "c17d134721748f4c10f55866d11bddfaff24322ce6bf4b2f8958264a0f08fd00",
-        "signature": "81132659eb713e8c675e8ae4d5519199436a1c8c32e1e4240ab7879185679a4e",
-        "affectsGlobalScope": false
       },
       "./node_modules/@types/passport-strategy/index.d.ts": {
         "version": "29d59e921bc723594bbfc98230d24f38f0d5a669f28fcf989b7468f4f95b7c52",
@@ -566,9 +541,49 @@
         "signature": "e50f9ae34bb92232533e3a32848970dd04f874a8f64d3ae48980e062b6489f26",
         "affectsGlobalScope": false
       },
+      "./node_modules/@types/crypto-js/index.d.ts": {
+        "version": "7eda637d5e9f03a2c6ddf6cd8880e7ac96fa17b048ad05213d18a7813d0c2861",
+        "signature": "7eda637d5e9f03a2c6ddf6cd8880e7ac96fa17b048ad05213d18a7813d0c2861",
+        "affectsGlobalScope": false
+      },
+      "./src/models/profiles.ts": {
+        "version": "a6dbcbc312e228e9f2c12986109147742d789eb0ececd42bb557059380583d5c",
+        "signature": "0345486e9a3ea296205fa37274fbfc157316831b87a5000da58caaad0fd78298",
+        "affectsGlobalScope": false
+      },
       "./src/controllers/authentification.ts": {
-        "version": "b574e6c5610f960e33bf147f0d35bd75684d11a75228f05013bafe2a448588ab",
-        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
+        "version": "2190163444b7a4c5c1662257aa49cef23dfaac98c505a3da061c0243953c9da2",
+        "signature": "4e2886dad1d6e81c617d104b246a732b4a6206ed9385a9ae0ec7cb3f1225563a",
+        "affectsGlobalScope": false
+      },
+      "./src/middlewares/authenticationrequired.ts": {
+        "version": "c1c3402d3d9e8fdc50132e468bdb512985aac760743390e0e8f5a2683686ebfb",
+        "signature": "86b161933c8a4f416aafec2860166c75d4f788a65b684d54cfce61d4076c4fc9",
+        "affectsGlobalScope": false
+      },
+      "./src/routes/profileroute.ts": {
+        "version": "73e87c964e8d5ee69774eee691860593f3ada54058db3f984571b2525f9d274e",
+        "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
+        "affectsGlobalScope": false
+      },
+      "./src/routes/loginroutes.ts": {
+        "version": "2b0214c01e58bb1b19df92c506c3dc397a8e18c376583e96dfae3680a0ebade8",
+        "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/@types/express-session/index.d.ts": {
+        "version": "3e03ea3c4d568a10e41f540bc891c5fb42c036a430187132e599176f7974eaf7",
+        "signature": "3e03ea3c4d568a10e41f540bc891c5fb42c036a430187132e599176f7974eaf7",
+        "affectsGlobalScope": true
+      },
+      "./node_modules/connect-mongo/src/types.d.ts": {
+        "version": "e8c80d24feb0124e305813adef906ac90d31d2bbe131327b3a3434726f3ad48c",
+        "signature": "e8c80d24feb0124e305813adef906ac90d31d2bbe131327b3a3434726f3ad48c",
+        "affectsGlobalScope": false
+      },
+      "./src/server.ts": {
+        "version": "1f9dc83eb23f05da719902e89a280367ffbdffe81ffa1553f65b267de7d6ae22",
+        "signature": "81132659eb713e8c675e8ae4d5519199436a1c8c32e1e4240ab7879185679a4e",
         "affectsGlobalScope": false
       },
       "./src/controllers/profilescontroller.ts": {
@@ -1139,6 +1154,18 @@
         "./node_modules/@types/qs/index.d.ts",
         "./node_modules/@types/range-parser/index.d.ts"
       ],
+      "./node_modules/@types/express-session/index.d.ts": [
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/index.d.ts",
+        "./node_modules/@types/node/ts3.1/events.d.ts",
+        "./node_modules/@types/node/ts3.1/fs.d.ts",
+        "./node_modules/@types/node/ts3.1/process.d.ts",
+        "./node_modules/@types/node/ts3.1/util.d.ts",
+        "./node_modules/@types/node/ts3.4/fs.d.ts",
+        "./node_modules/@types/node/ts3.4/process.d.ts",
+        "./node_modules/@types/node/ts3.4/util.d.ts"
+      ],
       "./node_modules/@types/express/index.d.ts": [
         "./node_modules/@types/body-parser/index.d.ts",
         "./node_modules/@types/express-serve-static-core/index.d.ts",
@@ -2565,6 +2592,19 @@
         "./node_modules/@types/node/ts3.4/process.d.ts",
         "./node_modules/@types/node/ts3.4/util.d.ts",
         "./node_modules/@types/yargs-parser/index.d.ts"
+      ],
+      "./node_modules/connect-mongo/src/types.d.ts": [
+        "./node_modules/@types/express-session/index.d.ts",
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/mongodb/index.d.ts",
+        "./node_modules/@types/mongoose/index.d.ts",
+        "./node_modules/@types/node/ts3.1/fs.d.ts",
+        "./node_modules/@types/node/ts3.1/process.d.ts",
+        "./node_modules/@types/node/ts3.1/util.d.ts",
+        "./node_modules/@types/node/ts3.4/fs.d.ts",
+        "./node_modules/@types/node/ts3.4/process.d.ts",
+        "./node_modules/@types/node/ts3.4/util.d.ts"
       ],
       "./node_modules/dotenv/types/index.d.ts": [
         "./node_modules/@types/graceful-fs/index.d.ts",
@@ -2921,6 +2961,7 @@
         "./node_modules/dotenv/types/index.d.ts"
       ],
       "./src/controllers/authentification.ts": [
+        "./node_modules/@types/express/index.d.ts",
         "./node_modules/@types/graceful-fs/index.d.ts",
         "./node_modules/@types/node/ts3.1/fs.d.ts",
         "./node_modules/@types/node/ts3.1/process.d.ts",
@@ -2953,6 +2994,16 @@
         "./node_modules/@types/node/ts3.4/util.d.ts",
         "./src/config.ts"
       ],
+      "./src/middlewares/authenticationrequired.ts": [
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/ts3.1/fs.d.ts",
+        "./node_modules/@types/node/ts3.1/process.d.ts",
+        "./node_modules/@types/node/ts3.1/util.d.ts",
+        "./node_modules/@types/node/ts3.4/fs.d.ts",
+        "./node_modules/@types/node/ts3.4/process.d.ts",
+        "./node_modules/@types/node/ts3.4/util.d.ts"
+      ],
       "./src/models/profiles.ts": [
         "./node_modules/@types/crypto-js/index.d.ts",
         "./node_modules/@types/graceful-fs/index.d.ts",
@@ -2973,7 +3024,8 @@
         "./node_modules/@types/node/ts3.4/fs.d.ts",
         "./node_modules/@types/node/ts3.4/process.d.ts",
         "./node_modules/@types/node/ts3.4/util.d.ts",
-        "./node_modules/@types/passport/index.d.ts"
+        "./node_modules/@types/passport/index.d.ts",
+        "./src/models/profiles.ts"
       ],
       "./src/routes/profileroute.ts": [
         "./node_modules/@types/express/index.d.ts",
@@ -2984,12 +3036,15 @@
         "./node_modules/@types/node/ts3.4/fs.d.ts",
         "./node_modules/@types/node/ts3.4/process.d.ts",
         "./node_modules/@types/node/ts3.4/util.d.ts",
+        "./src/middlewares/authenticationrequired.ts",
         "./src/models/profiles.ts"
       ],
       "./src/server.ts": [
+        "./node_modules/@types/express-session/index.d.ts",
         "./node_modules/@types/express/index.d.ts",
         "./node_modules/@types/graceful-fs/index.d.ts",
         "./node_modules/@types/helmet/index.d.ts",
+        "./node_modules/@types/mongoose/index.d.ts",
         "./node_modules/@types/morgan/index.d.ts",
         "./node_modules/@types/node/ts3.1/fs.d.ts",
         "./node_modules/@types/node/ts3.1/process.d.ts",
@@ -2997,7 +3052,9 @@
         "./node_modules/@types/node/ts3.4/fs.d.ts",
         "./node_modules/@types/node/ts3.4/process.d.ts",
         "./node_modules/@types/node/ts3.4/util.d.ts",
+        "./node_modules/connect-mongo/src/types.d.ts",
         "./src/config.ts",
+        "./src/controllers/authentification.ts",
         "./src/database.ts",
         "./src/routes/loginroutes.ts",
         "./src/routes/profileroute.ts"
@@ -3161,6 +3218,18 @@
         "./node_modules/@types/node/ts3.4/util.d.ts",
         "./node_modules/@types/qs/index.d.ts",
         "./node_modules/@types/range-parser/index.d.ts"
+      ],
+      "./node_modules/@types/express-session/index.d.ts": [
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/index.d.ts",
+        "./node_modules/@types/node/ts3.1/events.d.ts",
+        "./node_modules/@types/node/ts3.1/fs.d.ts",
+        "./node_modules/@types/node/ts3.1/process.d.ts",
+        "./node_modules/@types/node/ts3.1/util.d.ts",
+        "./node_modules/@types/node/ts3.4/fs.d.ts",
+        "./node_modules/@types/node/ts3.4/process.d.ts",
+        "./node_modules/@types/node/ts3.4/util.d.ts"
       ],
       "./node_modules/@types/express/index.d.ts": [
         "./node_modules/@types/body-parser/index.d.ts",
@@ -4589,6 +4658,19 @@
         "./node_modules/@types/node/ts3.4/util.d.ts",
         "./node_modules/@types/yargs-parser/index.d.ts"
       ],
+      "./node_modules/connect-mongo/src/types.d.ts": [
+        "./node_modules/@types/express-session/index.d.ts",
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/mongodb/index.d.ts",
+        "./node_modules/@types/mongoose/index.d.ts",
+        "./node_modules/@types/node/ts3.1/fs.d.ts",
+        "./node_modules/@types/node/ts3.1/process.d.ts",
+        "./node_modules/@types/node/ts3.1/util.d.ts",
+        "./node_modules/@types/node/ts3.4/fs.d.ts",
+        "./node_modules/@types/node/ts3.4/process.d.ts",
+        "./node_modules/@types/node/ts3.4/util.d.ts"
+      ],
       "./node_modules/dotenv/types/index.d.ts": [
         "./node_modules/@types/graceful-fs/index.d.ts",
         "./node_modules/@types/node/index.d.ts",
@@ -4932,8 +5014,14 @@
         "./node_modules/@types/node/ts3.4/process.d.ts",
         "./node_modules/@types/node/ts3.4/util.d.ts"
       ],
+      "./src/controllers/authentification.ts": [
+        "./node_modules/@types/express/index.d.ts"
+      ],
       "./src/database.ts": [
         "./src/config.ts"
+      ],
+      "./src/middlewares/authenticationrequired.ts": [
+        "./node_modules/@types/express/index.d.ts"
       ],
       "./src/models/profiles.ts": [
         "./node_modules/@types/mongoose/index.d.ts"
@@ -4965,6 +5053,7 @@
       "./node_modules/@types/debug/index.d.ts",
       "./node_modules/@types/dedent/index.d.ts",
       "./node_modules/@types/express-serve-static-core/index.d.ts",
+      "./node_modules/@types/express-session/index.d.ts",
       "./node_modules/@types/express/index.d.ts",
       "./node_modules/@types/find-cache-dir/index.d.ts",
       "./node_modules/@types/find-package-json/index.d.ts",
@@ -5095,6 +5184,7 @@
       "./node_modules/@types/uuid/index.d.ts",
       "./node_modules/@types/yargs-parser/index.d.ts",
       "./node_modules/@types/yargs/index.d.ts",
+      "./node_modules/connect-mongo/src/types.d.ts",
       "./node_modules/dotenv/types/index.d.ts",
       "./node_modules/typescript/lib/lib.es2015.collection.d.ts",
       "./node_modules/typescript/lib/lib.es2015.core.d.ts",
@@ -5137,6 +5227,7 @@
       "./src/controllers/authentification.ts",
       "./src/controllers/profilescontroller.ts",
       "./src/database.ts",
+      "./src/middlewares/authenticationrequired.ts",
       "./src/models/profiles.ts",
       "./src/routes/loginroutes.ts",
       "./src/routes/profileroute.ts",
