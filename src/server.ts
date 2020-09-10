@@ -23,10 +23,7 @@ export function createExpressApp(config: IConfig): express.Express {
 	app.use(morgan('combined'));
 	app.use(helmet());
 	app.use(express.json());
-	app.use(cors);
-
-	app.use(authenticationInitialize());
-	app.use(authenticationSession());
+	app.use(cors());
 
 	app.use(session({
 		name: session_cookie_name,
@@ -34,8 +31,10 @@ export function createExpressApp(config: IConfig): express.Express {
 		resave: false,
 		saveUninitialized: false,
 		store: new MongoStore({ mongooseConnection: mongoose.connection })
-	})
-	)
+	}))
+
+	app.use(authenticationInitialize());
+	app.use(authenticationSession());
 
 	app.use(((err, _req, res, _next) => {
 		console.error(err.stack);

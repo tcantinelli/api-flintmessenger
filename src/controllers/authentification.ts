@@ -15,7 +15,7 @@ passport.use(
 					const hasCorrectPassword = profile.verifyPassword(password);
 					if (hasCorrectPassword) return done(null, profile);
 				}
-				return done(new Error("Profile not found"));
+				return done(new ProfileNotFoundError("Profile not found"));
 			});
 		} catch (error) { done(error) }
 	})
@@ -36,3 +36,4 @@ passport.deserializeUser(
 
 export const authenticationInitialize = (): Handler => passport.initialize();
 export const authenticationSession = (): Handler => passport.session();
+export class ProfileNotFoundError extends Error {};

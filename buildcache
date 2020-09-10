@@ -526,6 +526,11 @@
         "signature": "29b7786da16200eaf23b5aeb2a1ac1c6e333bf7e221647012d77f832f42a72e2",
         "affectsGlobalScope": false
       },
+      "./node_modules/@types/cors/index.d.ts": {
+        "version": "f6283751acbb93a4ade61ab11ee4bb7139b12c5aa6307f5b89f058af60eec332",
+        "signature": "f6283751acbb93a4ade61ab11ee4bb7139b12c5aa6307f5b89f058af60eec332",
+        "affectsGlobalScope": false
+      },
       "./node_modules/@types/passport/index.d.ts": {
         "version": "f640cdd17b26d4ecaf98f17d90e012b25a29676e30149ef26f02572159cb325a",
         "signature": "f640cdd17b26d4ecaf98f17d90e012b25a29676e30149ef26f02572159cb325a",
@@ -547,13 +552,13 @@
         "affectsGlobalScope": false
       },
       "./src/models/profiles.ts": {
-        "version": "a6dbcbc312e228e9f2c12986109147742d789eb0ececd42bb557059380583d5c",
-        "signature": "0345486e9a3ea296205fa37274fbfc157316831b87a5000da58caaad0fd78298",
+        "version": "223e6ecf4db3e8ddfabb4e0b586723480fb11bbca0f43837e6fd02add051397e",
+        "signature": "8e4cb175e15ea602a46f8a6c6fae66c68f93d09a56425f7d25375bce52fe1bd7",
         "affectsGlobalScope": false
       },
       "./src/controllers/authentification.ts": {
-        "version": "2190163444b7a4c5c1662257aa49cef23dfaac98c505a3da061c0243953c9da2",
-        "signature": "4e2886dad1d6e81c617d104b246a732b4a6206ed9385a9ae0ec7cb3f1225563a",
+        "version": "ecb87c2d148af29ebad524767905cf812665a701d08036644705e497d76d0200",
+        "signature": "eac118e31260641771db67adb2d6566bf2674ff397f1fb07ee8ae89192b4e277",
         "affectsGlobalScope": false
       },
       "./src/middlewares/authenticationrequired.ts": {
@@ -561,13 +566,18 @@
         "signature": "86b161933c8a4f416aafec2860166c75d4f788a65b684d54cfce61d4076c4fc9",
         "affectsGlobalScope": false
       },
+      "./src/controllers/profiles.ts": {
+        "version": "1aba4288cdcd8fb26b6875799c79b85e12260ba73ce73258b9d1338fc890d24d",
+        "signature": "966df3905b3ee2e87eec2a638233949d2d491b26c4a83f35273d860584ad2697",
+        "affectsGlobalScope": false
+      },
       "./src/routes/profileroute.ts": {
-        "version": "73e87c964e8d5ee69774eee691860593f3ada54058db3f984571b2525f9d274e",
+        "version": "050bdf59d18d6e51bcd0a9fe4ceeb08555602172e20e46c616181fb17d8039a3",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
         "affectsGlobalScope": false
       },
       "./src/routes/loginroutes.ts": {
-        "version": "2b0214c01e58bb1b19df92c506c3dc397a8e18c376583e96dfae3680a0ebade8",
+        "version": "ef9cc62b53c0bdbe36e7520b8f4b9d394abba2ae07a8663f23e947a78cc261b4",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
         "affectsGlobalScope": false
       },
@@ -582,13 +592,8 @@
         "affectsGlobalScope": false
       },
       "./src/server.ts": {
-        "version": "1f9dc83eb23f05da719902e89a280367ffbdffe81ffa1553f65b267de7d6ae22",
+        "version": "4746cc9dbfd8eacf1da7f8b6761b39d2fd3648f305ca07018cbb01298710e941",
         "signature": "81132659eb713e8c675e8ae4d5519199436a1c8c32e1e4240ab7879185679a4e",
-        "affectsGlobalScope": false
-      },
-      "./src/controllers/profilescontroller.ts": {
-        "version": "1b61d37240ebb769c0c354465cf0f55570ffaea004634e7ec9f398f0268d434e",
-        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
         "affectsGlobalScope": false
       },
       "./node_modules/@babel/types/lib/index.d.ts": {
@@ -1096,6 +1101,16 @@
         "./node_modules/@types/node/index.d.ts",
         "./node_modules/@types/node/ts3.1/fs.d.ts",
         "./node_modules/@types/node/ts3.1/http.d.ts",
+        "./node_modules/@types/node/ts3.1/process.d.ts",
+        "./node_modules/@types/node/ts3.1/util.d.ts",
+        "./node_modules/@types/node/ts3.4/fs.d.ts",
+        "./node_modules/@types/node/ts3.4/process.d.ts",
+        "./node_modules/@types/node/ts3.4/util.d.ts"
+      ],
+      "./node_modules/@types/cors/index.d.ts": [
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/ts3.1/fs.d.ts",
         "./node_modules/@types/node/ts3.1/process.d.ts",
         "./node_modules/@types/node/ts3.1/util.d.ts",
         "./node_modules/@types/node/ts3.4/fs.d.ts",
@@ -2973,7 +2988,7 @@
         "./node_modules/@types/passport/index.d.ts",
         "./src/models/profiles.ts"
       ],
-      "./src/controllers/profilescontroller.ts": [
+      "./src/controllers/profiles.ts": [
         "./node_modules/@types/graceful-fs/index.d.ts",
         "./node_modules/@types/node/ts3.1/fs.d.ts",
         "./node_modules/@types/node/ts3.1/process.d.ts",
@@ -3025,6 +3040,7 @@
         "./node_modules/@types/node/ts3.4/process.d.ts",
         "./node_modules/@types/node/ts3.4/util.d.ts",
         "./node_modules/@types/passport/index.d.ts",
+        "./src/controllers/authentification.ts",
         "./src/models/profiles.ts"
       ],
       "./src/routes/profileroute.ts": [
@@ -3036,10 +3052,12 @@
         "./node_modules/@types/node/ts3.4/fs.d.ts",
         "./node_modules/@types/node/ts3.4/process.d.ts",
         "./node_modules/@types/node/ts3.4/util.d.ts",
+        "./src/controllers/profiles.ts",
         "./src/middlewares/authenticationrequired.ts",
         "./src/models/profiles.ts"
       ],
       "./src/server.ts": [
+        "./node_modules/@types/cors/index.d.ts",
         "./node_modules/@types/express-session/index.d.ts",
         "./node_modules/@types/express/index.d.ts",
         "./node_modules/@types/graceful-fs/index.d.ts",
@@ -3161,6 +3179,16 @@
         "./node_modules/@types/node/index.d.ts",
         "./node_modules/@types/node/ts3.1/fs.d.ts",
         "./node_modules/@types/node/ts3.1/http.d.ts",
+        "./node_modules/@types/node/ts3.1/process.d.ts",
+        "./node_modules/@types/node/ts3.1/util.d.ts",
+        "./node_modules/@types/node/ts3.4/fs.d.ts",
+        "./node_modules/@types/node/ts3.4/process.d.ts",
+        "./node_modules/@types/node/ts3.4/util.d.ts"
+      ],
+      "./node_modules/@types/cors/index.d.ts": [
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/ts3.1/fs.d.ts",
         "./node_modules/@types/node/ts3.1/process.d.ts",
         "./node_modules/@types/node/ts3.1/util.d.ts",
         "./node_modules/@types/node/ts3.4/fs.d.ts",
@@ -5017,6 +5045,9 @@
       "./src/controllers/authentification.ts": [
         "./node_modules/@types/express/index.d.ts"
       ],
+      "./src/controllers/profiles.ts": [
+        "./src/models/profiles.ts"
+      ],
       "./src/database.ts": [
         "./src/config.ts"
       ],
@@ -5048,6 +5079,7 @@
       "./node_modules/@types/bson/index.d.ts",
       "./node_modules/@types/color-name/index.d.ts",
       "./node_modules/@types/connect/index.d.ts",
+      "./node_modules/@types/cors/index.d.ts",
       "./node_modules/@types/cross-spawn/index.d.ts",
       "./node_modules/@types/crypto-js/index.d.ts",
       "./node_modules/@types/debug/index.d.ts",
@@ -5225,7 +5257,7 @@
       "./node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "./src/config.ts",
       "./src/controllers/authentification.ts",
-      "./src/controllers/profilescontroller.ts",
+      "./src/controllers/profiles.ts",
       "./src/database.ts",
       "./src/middlewares/authenticationrequired.ts",
       "./src/models/profiles.ts",
