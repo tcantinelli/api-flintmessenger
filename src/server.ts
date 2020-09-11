@@ -23,7 +23,11 @@ export function createExpressApp(config: IConfig): express.Express {
 	app.use(morgan('combined'));
 	app.use(helmet());
 	app.use(express.json());
-	app.use(cors());
+	// app.use(cors({credentials: true, origin: true}));
+	app.use(cors({
+		credentials: true,
+		origin: true
+	  }));
 
 	app.use(session({
 		name: session_cookie_name,

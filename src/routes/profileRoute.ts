@@ -41,10 +41,7 @@ router.post('/', (req: Request, res: Response) => {
 
 		newProfile.save((err, profile) => {
 			if (err) res.status(500).send('Erreur serveur');
-			res.status(201).send({
-				id: profile._id,
-				email, firstname, lastname
-			});
+			res.status(201).send(profile.getSafeProfile());
 		});
 	} else {
 		res.status(400).send('Données manquantes');
