@@ -1,9 +1,15 @@
 import { Request, Response, Router } from 'express';
-import { Profile } from '../models/profiles';
+import { IProfile, Profile } from '../models/profiles';
 import { authenticationRequired } from '../middlewares/authenticationRequired';
 import { getAllProfiles, getProfile } from '../controllers/profiles';
 
 const router = Router();
+
+/* GET USER PROFILES */
+router.get("/me", authenticationRequired, (request: Request, response: Response) => {
+	if(!request.user) { return response.status(401).send() }
+	return response.json((request.user as IProfile).getSafeProfile());
+  });
 
 /* GET */
 router.get('/:profileId', authenticationRequired, (req: Request, res: Response) => {
