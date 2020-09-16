@@ -2,11 +2,12 @@ import { Request, Response, Router } from 'express';
 import passport from 'passport';
 import { IUsers } from '../models/users';
 import { UserNotFoundError } from '../controllers/authentification';
-import { authenticationRequired } from '../middlewares/authenticationRequired';
+import UsersController from '../controllers/users';
 
 const router = Router();
 
-router.post('/', (req: Request, res: Response) => {
+/* LOGIN */
+router.post('/login', (req: Request, res: Response) => {
 	passport.authenticate('local', (err, user: IUsers) => {
 		if (err) {
 			return err instanceof UserNotFoundError
@@ -26,10 +27,20 @@ router.post('/', (req: Request, res: Response) => {
 	})(req, res);
 });
 
-/* GET MAIN USER PROFILE*/
-router.get("/me", authenticationRequired, (request: Request, response: Response) => {
-	if(!request.user) { return response.status(401).send() }
-	return response.json((request.user as IUsers).getSafeUser());
-  });
+/* REGISTER */
+router.post('/register', async (req: Request, res: Response) => {
+	const { email, firstname, lastname, password } = req.body;
+
+	if (email && firstname && lastname) {
+		try {
+			const user = await UsersController.addUsers(email, firstname, lastname, password);
+			res.status(201).send(user.getSafeUser());
+		} catch (_err) {
+			res.status(500).send('Erreur serveur');
+		}
+	} else {
+		res.status(400).send('Données manquantes');
+	}
+});
 
 export default router;
