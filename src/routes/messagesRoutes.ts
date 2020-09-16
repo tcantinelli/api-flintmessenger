@@ -5,8 +5,31 @@ import { Users, IUsers } from "../models/users";
 
 const router = Router();
 
+/* GET ALL CONVERSATIONS FROM MAIN USER */
+router.get('/', authenticationRequired, async (req: Request, res: Response) => {
+	if (!req.user) { return res.status(401).send('You must be authenticated') };
+	try {
+		const messages = await MessagesController.getMessages(req.user as IUsers);
+		res.send(messages);
+	} catch (_err) {
+		return res.status(500).send('Server error');
+	}
+});
+
+/* GET ONE CONVERSATION */
+router.get('/:conversationId', authenticationRequired, async (req: Request, res: Response) => {
+	if (!req.user) { return res.status(401).send('You must be authenticated') };
+	try {
+		const messages = await MessagesController.getMessages(req.user as IUsers, req.params['conversationId']);
+		res.send(messages);
+	} catch (_err) {
+		return res.status(500).send('Server error');
+	}
+});
+
 /* DELETE */
 router.delete('/:messageId', authenticationRequired, async (req: Request, res: Response) => {
+	if (!req.user) { return res.status(401).send('You must be authenticated') };
 	const { messageId } = req.params;
 
 	try {

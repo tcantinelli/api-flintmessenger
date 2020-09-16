@@ -572,12 +572,12 @@
         "affectsGlobalScope": false
       },
       "./src/controllers/messages.ts": {
-        "version": "dcf859f8991a1757b0b7277774d36c2490a7ae63f5cfb0a0be48b5b2b171de3a",
-        "signature": "4cbeddd24dc10e17d7a3e7e79e21d7631d02037f3ec4e40383aa084f8671c6f9",
+        "version": "064d4324b1cd075c617c3e42685d14c9296a89d731b7074e969bde3adc84b8cc",
+        "signature": "31f3222c7bcfe6eaa2a18faca0bce8b225a15fccb5f0f0e1cd86d835db0e9b9c",
         "affectsGlobalScope": false
       },
       "./src/routes/messagesroutes.ts": {
-        "version": "81067043ac0daa2e48ee369763dcd68f79a1f2f90e6b4e56794739320340ce95",
+        "version": "0bcaa4175cd074db30585e43859baf67f58e52db63015068edd37670f7285e06",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
         "affectsGlobalScope": false
       },
@@ -587,7 +587,7 @@
         "affectsGlobalScope": false
       },
       "./src/routes/usersroute.ts": {
-        "version": "65660dcc5e0df797ad41914b65e4dd3d241b468670a371d76dc56442722804d5",
+        "version": "03cade217d292c1f79f51a5f331170d18ec9cd9fd30c8bbdb1fc2c44a8b5a284",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
         "affectsGlobalScope": false
       },
@@ -3011,7 +3011,8 @@
         "./node_modules/@types/node/ts3.4/fs.d.ts",
         "./node_modules/@types/node/ts3.4/process.d.ts",
         "./node_modules/@types/node/ts3.4/util.d.ts",
-        "./src/models/messages.ts"
+        "./src/models/messages.ts",
+        "./src/models/users.ts"
       ],
       "./src/controllers/users.ts": [
         "./node_modules/@types/graceful-fs/index.d.ts",
@@ -5095,7 +5096,8 @@
         "./node_modules/@types/express/index.d.ts"
       ],
       "./src/controllers/messages.ts": [
-        "./src/models/messages.ts"
+        "./src/models/messages.ts",
+        "./src/models/users.ts"
       ],
       "./src/controllers/users.ts": [
         "./src/models/users.ts"
