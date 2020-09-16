@@ -1,4 +1,4 @@
-import { Users } from '../../src/models/profiles';
+import { Users } from '../../src/models/users';
 
 const userTest = new Users({
 	email: "thomas@mail.com",

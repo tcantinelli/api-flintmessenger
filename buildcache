@@ -552,12 +552,12 @@
         "affectsGlobalScope": false
       },
       "./src/models/users.ts": {
-        "version": "e22e0d25b574f20e14b75ab0c66b05d19227ff3809db01399b764f9e01dab135",
+        "version": "64b6305ec1187f2c39fcf19a6233d0fcccc190e597f9cfa5329c7c06c75ba8d6",
         "signature": "065491f0ee32dbb59c1c0a45e084ba6e2bcf61e54fd943a456e1b456b0156c93",
         "affectsGlobalScope": false
       },
       "./src/controllers/authentification.ts": {
-        "version": "73e7a1b946b956f01cb4eba559dad6e5692975c27dec53677280fc96f1f5114d",
+        "version": "68b7d13d7725e4e146ab08de723fdcd3ebc0781fe6db7686c590ab08aa15f2e5",
         "signature": "c2b0247203d8a7f288055c1fc86d1fcf81e54d5f8e5966c7cd36bed2319b1ea1",
         "affectsGlobalScope": false
       },
@@ -567,7 +567,7 @@
         "affectsGlobalScope": false
       },
       "./src/models/messages.ts": {
-        "version": "51b0dacb318892093294132cbed53be8b5922cd42638c07b2d4ee44246987995",
+        "version": "85749889b026ea42cf20868ce6c3a0d0ce9da238f194720f3f2ff909e84cd251",
         "signature": "b010379689455ef401fc7a74feb864a16cb31ff690e0a72e60a3678649ac53ff",
         "affectsGlobalScope": false
       },
@@ -587,12 +587,12 @@
         "affectsGlobalScope": false
       },
       "./src/routes/usersroute.ts": {
-        "version": "783d0354c5441e29f93dc423cfcae0236193da4c3a15a1ef3aafd9a3e67a7390",
+        "version": "450dddc39a415bda365ab9566373a435dc76b0ab45c9dc406c58211526ad9b3b",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
         "affectsGlobalScope": false
       },
       "./src/routes/authroutes.ts": {
-        "version": "cbd2e22f2f2389fe344be3bcb59d3d34e31e50c61a6c72e787c8c0ee12415921",
+        "version": "b3dc7abecd371ae84aa92b8ee680146881c949932da18aabad1fb691447260a1",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
         "affectsGlobalScope": false
       },
@@ -3078,6 +3078,7 @@
         "./node_modules/@types/passport/index.d.ts",
         "./src/controllers/authentification.ts",
         "./src/controllers/users.ts",
+        "./src/middlewares/authenticationrequired.ts",
         "./src/models/users.ts"
       ],
       "./src/routes/messagesroutes.ts": [

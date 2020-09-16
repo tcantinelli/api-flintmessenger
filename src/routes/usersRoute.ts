@@ -5,7 +5,7 @@ import { IUsers } from '../models/users';
 
 const router = Router();
 
-/* GET MAIN USER PROFILE*/
+/* GET MAIN USER DATAS*/
 router.get("/me", authenticationRequired, async (req: Request, res: Response) => {
 	if(!req.user) { return res.status(401).send('You must be authenticated')};
 	try {
@@ -29,20 +29,6 @@ router.get('/:userId', authenticationRequired, async (req: Request, res: Respons
 		return res.send(user.getSafeUser());
 	} catch (_err) {
 		return res.status(500).send()
-	}
-});
-
-/* DELETE */
-router.delete('/:userId', authenticationRequired, async (req: Request, res: Response) => {
-	if(!req.user) { return res.status(401).send('You must be authenticated')};
-	const { userId } = req.params;
-
-	try {
-		const deletedUser = await UsersController.deleteUsers(userId);
-		if (deletedUser == null) { res.status(404).send("Utilisateur inconnu"); return; }
-		res.status(200).send('L\'utilisateur a été supprimé');
-	} catch (_err) {
-		res.status(500).send("Il y a eu une erreur serveur");
 	}
 });
 

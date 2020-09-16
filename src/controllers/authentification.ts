@@ -9,11 +9,11 @@ passport.use(
 	new Strategy(localOptions, (username: string, password: string, done) => {
 	// new Strategy((username: string, password: string, done) => {
 		try {
-			Users.findOne({ email: username }, null, (err, profile) => {
+			Users.findOne({ email: username }, null, (err, user) => {
 				if (err) return done(err);
-				if (profile) {
-					const hasCorrectPassword = profile.verifyPassword(password);
-					if (hasCorrectPassword) return done(null, profile);
+				if (user) {
+					const hasCorrectPassword = user.verifyPassword(password);
+					if (hasCorrectPassword) return done(null, user);
 				}
 				return done(new UserNotFoundError("Users not found"));
 			});
@@ -27,10 +27,10 @@ passport.serializeUser(
 
 passport.deserializeUser(
 	(_id, done) => {
-		Users.findById(_id, (err, profile) => {
+		Users.findById(_id, (err, user) => {
 			console.log(err);
 			if (err) { return done(err) };
-			return done(undefined, profile);
+			return done(undefined, user);
 		});
 	})
 

@@ -11,7 +11,7 @@ export interface IUsers extends Document {
 	getSafeUser: () => ISafeUsers;
 }
 
-const profileSchema = new Schema({
+const usersSchema = new Schema({
 	email: { type: String, required: true, unique: true },
 	firstname: { type: String, required: true },
 	lastname: { type: String, required: true },
@@ -19,24 +19,24 @@ const profileSchema = new Schema({
 });
 
 
-profileSchema.methods.getFullname = function () {
+usersSchema.methods.getFullname = function () {
 	return `${this.firstname} ${this.lastname}`;
 }
 
-profileSchema.methods.setPassword = function (password: string) {
+usersSchema.methods.setPassword = function (password: string) {
 	this.password = SHA256(password).toString();
 }
 
-profileSchema.methods.verifyPassword = function (password: string) {
+usersSchema.methods.verifyPassword = function (password: string) {
 	return this.password === SHA256(password).toString();
 }
 
 //Type pour reponse client, sans pwd
 export type ISafeUsers = Pick<IUsers, '_id' | 'email' | 'lastname' | 'firstname'>;
 
-profileSchema.methods.getSafeUser = function (): ISafeUsers {
+usersSchema.methods.getSafeUser = function (): ISafeUsers {
 	const { _id, email, lastname, firstname } = this;
 	return { _id, email, lastname, firstname };
 };
 
-export const Users = model<IUsers, Model<IUsers>>("profile", profileSchema);
+export const Users = model<IUsers, Model<IUsers>>("users", usersSchema);

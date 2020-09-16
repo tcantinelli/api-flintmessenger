@@ -12,12 +12,12 @@ const messagesSchema = new Schema({
 	conversationId: { type: String, required: true },
 	emitter: {
 		type: Schema.Types.ObjectId,
-		ref: 'profile',
+		ref: 'user',
 		required: true
 	},
 	targets: [{
 		type: Schema.Types.ObjectId,
-		ref: 'profile'
+		ref: 'user'
 	}],
 	createdAt: { type: Date, default: new Date() },
 	content: { type: String, required: true }
