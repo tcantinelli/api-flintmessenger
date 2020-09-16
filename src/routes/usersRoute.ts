@@ -1,64 +1,61 @@
 import { Request, Response, Router } from 'express';
 import { Users } from '../models/users';
 import { authenticationRequired } from '../middlewares/authenticationRequired';
-import { getUsers, getUser } from '../controllers/profiles';
+import UsersController from '../controllers/users';
 
 const router = Router();
 
-/* GET */
-router.get('/:userId', authenticationRequired, (req: Request, res: Response) => {
+/* GET ONE*/
+router.get('/:userId', authenticationRequired, async (req: Request, res: Response) => {
 	const { userId } = req.params;
 
-	getUser(userId)
-		.then(user => {
-			if (user === null) { return res.status(404).send("User not found"); }
-			return res.send(user.getSafeUser());
-		}).catch(error => {
-			console.error(error);
-			return res.status(500).send()
-		});
+	try {
+		const user = await UsersController.getUser(userId);
+		if (user === null) { return res.status(404).send("User not found"); }
+		return res.send(user.getSafeUser());
+	} catch (_err) {
+		return res.status(500).send()
+	}
 });
 
 /* DELETE */
-router.delete('/:userId', authenticationRequired, (req: Request, res: Response) => {
+router.delete('/:userId', authenticationRequired, async (req: Request, res: Response) => {
 	const { userId } = req.params;
 
-	Users.findByIdAndDelete(userId, (err, user) => {
-		if (err) res.status(500).send("Il y a eu une erreur serveur");
-		if (user == null) { res.status(404).send("Utilisateur inconnu"); return; }
+	try {
+		const deletedUser = await UsersController.deleteUsers(userId);
+		if (deletedUser == null) { res.status(404).send("Utilisateur inconnu"); return; }
 		res.status(200).send('L\'utilisateur a été supprimé');
-	});
+	} catch (_err) {
+		res.status(500).send("Il y a eu une erreur serveur");
+	}
 });
 
 /* CREATE */
-router.post('/', (req: Request, res: Response) => {
+router.post('/', async (req: Request, res: Response) => {
 	const { email, firstname, lastname, password } = req.body;
 
 	if (email && firstname && lastname) {
-		const newUser = new Users({ email: email, firstname: firstname, lastname: lastname })
-
-		newUser.setPassword(password);
-
-		newUser.save((err, user) => {
-			if (err) res.status(500).send('Erreur serveur');
+		try {
+			const user = await UsersController.addUsers(email, firstname, lastname, password);
 			res.status(201).send(user.getSafeUser());
-		});
+		} catch (_err) {
+			res.status(500).send('Erreur serveur');
+		}
 	} else {
 		res.status(400).send('Données manquantes');
 	}
 });
 
-/* GET ALL PROFILES */
-router.get('/', (req: Request, res: Response) => {
-	getUsers()
-		.then(profiles => profiles.map(profile => profile.getSafeUser()))
-		.then(safeProfiles => {
-			return res.status(200).send(safeProfiles);
-		})
-		.catch(error => {
-			console.error(error);
-			return res.status(500).send();
-		})
+/* GET ALL */
+router.get('/', async (_req: Request, res: Response) => {
+	try {
+		const users = await UsersController.getUsers();
+		const safeUsers = users.map(user => user.getSafeUser());
+		return res.status(200).send(safeUsers);
+	} catch (_err) {
+		return res.status(500).send();
+	}
 });
 
 export default router;

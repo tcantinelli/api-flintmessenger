@@ -567,7 +567,7 @@
         "affectsGlobalScope": false
       },
       "./src/routes/messagesroutes.ts": {
-        "version": "6d5e5ccea20df801ecf6f641dee72b07f0885f6ac53c11c9403fadf1d29ab3ae",
+        "version": "afe01fa49846c7d71af8070de4f5a6ef4ba058af2a62256b8432e6b4b8a4ab1a",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
         "affectsGlobalScope": false
       },
@@ -576,13 +576,13 @@
         "signature": "86b161933c8a4f416aafec2860166c75d4f788a65b684d54cfce61d4076c4fc9",
         "affectsGlobalScope": false
       },
-      "./src/controllers/profiles.ts": {
-        "version": "f4b5df62f4c47b5a0b85d77e750c5a21be01c0b7b9eaa47401c13b46b157defc",
-        "signature": "9f76ea8b6459a58e0cb4a0622de8cfba190f1cd8bad961b33fa6f9488914cb10",
+      "./src/controllers/users.ts": {
+        "version": "4491ca2207362908ab5f4bf69444fee388d7daf7e4e4bd263c01effbc9c3f9b8",
+        "signature": "3f51a3f3cc2ddea7543f3e6d6d4ac59e29d32698e897dd37878d4a65f96064f4",
         "affectsGlobalScope": false
       },
       "./src/routes/usersroute.ts": {
-        "version": "f3f2259835d95f311b1daeb703dc26da167fee164f7907c0813e5a57f6b61588",
+        "version": "cafbe883debac1606396d86016b985d4b883661d7fe4f00e0dca506065f757b0",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
         "affectsGlobalScope": false
       },
@@ -2998,7 +2998,7 @@
         "./node_modules/@types/passport/index.d.ts",
         "./src/models/users.ts"
       ],
-      "./src/controllers/profiles.ts": [
+      "./src/controllers/users.ts": [
         "./node_modules/@types/graceful-fs/index.d.ts",
         "./node_modules/@types/node/ts3.1/fs.d.ts",
         "./node_modules/@types/node/ts3.1/process.d.ts",
@@ -3084,7 +3084,7 @@
         "./node_modules/@types/node/ts3.4/fs.d.ts",
         "./node_modules/@types/node/ts3.4/process.d.ts",
         "./node_modules/@types/node/ts3.4/util.d.ts",
-        "./src/controllers/profiles.ts",
+        "./src/controllers/users.ts",
         "./src/middlewares/authenticationrequired.ts",
         "./src/models/users.ts"
       ],
@@ -5078,7 +5078,7 @@
       "./src/controllers/authentification.ts": [
         "./node_modules/@types/express/index.d.ts"
       ],
-      "./src/controllers/profiles.ts": [
+      "./src/controllers/users.ts": [
         "./src/models/users.ts"
       ],
       "./src/database.ts": [
@@ -5296,7 +5296,7 @@
       "./node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "./src/config.ts",
       "./src/controllers/authentification.ts",
-      "./src/controllers/profiles.ts",
+      "./src/controllers/users.ts",
       "./src/database.ts",
       "./src/middlewares/authenticationrequired.ts",
       "./src/models/messages.ts",

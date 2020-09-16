@@ -3,6 +3,7 @@ import { Messages } from '../models/messages';
 
 const router = Router();
 
+/* CREATE */
 router.post('/', async (req: Request, res: Response) => {
 	const { conversationId, emitter, targets, content } = req.body;
 
@@ -17,5 +18,8 @@ router.post('/', async (req: Request, res: Response) => {
 		};
 	};
 });
+
+/* GET ONE */
+
 
 export default router;
