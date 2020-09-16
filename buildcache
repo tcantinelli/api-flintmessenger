@@ -561,6 +561,16 @@
         "signature": "eac118e31260641771db67adb2d6566bf2674ff397f1fb07ee8ae89192b4e277",
         "affectsGlobalScope": false
       },
+      "./src/models/messages.ts": {
+        "version": "f46498946d339fc957430da2968f7a4d220b8b0ec64dd9c6f9ff6243fea526a7",
+        "signature": "2699a31ce37c8f64ab03d952b39f67adabd043f0739af2dfa2d5c0a3500d262b",
+        "affectsGlobalScope": false
+      },
+      "./src/routes/messageroutes.ts": {
+        "version": "a28f100274c3f145b3230fb549ae3f6919205cb97d70a524c6943c2f61d7b33c",
+        "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
+        "affectsGlobalScope": false
+      },
       "./src/middlewares/authenticationrequired.ts": {
         "version": "c1c3402d3d9e8fdc50132e468bdb512985aac760743390e0e8f5a2683686ebfb",
         "signature": "86b161933c8a4f416aafec2860166c75d4f788a65b684d54cfce61d4076c4fc9",
@@ -572,7 +582,7 @@
         "affectsGlobalScope": false
       },
       "./src/routes/profileroute.ts": {
-        "version": "d7ee4dad1e6365f736b31560b0978084ff27ecbfd4008c55db4c6087f77ac303",
+        "version": "c7e29c364c85bef085bd433155d1c854545f9c1eb19fac6a7b615181629c05b3",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
         "affectsGlobalScope": false
       },
@@ -592,7 +602,7 @@
         "affectsGlobalScope": false
       },
       "./src/server.ts": {
-        "version": "be0848122e4522bd1656ad79f1ff10303a61f48df7e7cc6bae23f3bc6861ab04",
+        "version": "a3bf3d0d2606700325a8c13fb4e4a9eda30455022053c3b65044a393ebb68166",
         "signature": "81132659eb713e8c675e8ae4d5519199436a1c8c32e1e4240ab7879185679a4e",
         "affectsGlobalScope": false
       },
@@ -3019,6 +3029,16 @@
         "./node_modules/@types/node/ts3.4/process.d.ts",
         "./node_modules/@types/node/ts3.4/util.d.ts"
       ],
+      "./src/models/messages.ts": [
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/mongoose/index.d.ts",
+        "./node_modules/@types/node/ts3.1/fs.d.ts",
+        "./node_modules/@types/node/ts3.1/process.d.ts",
+        "./node_modules/@types/node/ts3.1/util.d.ts",
+        "./node_modules/@types/node/ts3.4/fs.d.ts",
+        "./node_modules/@types/node/ts3.4/process.d.ts",
+        "./node_modules/@types/node/ts3.4/util.d.ts"
+      ],
       "./src/models/profiles.ts": [
         "./node_modules/@types/crypto-js/index.d.ts",
         "./node_modules/@types/graceful-fs/index.d.ts",
@@ -3042,6 +3062,17 @@
         "./node_modules/@types/passport/index.d.ts",
         "./src/controllers/authentification.ts",
         "./src/models/profiles.ts"
+      ],
+      "./src/routes/messageroutes.ts": [
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/ts3.1/fs.d.ts",
+        "./node_modules/@types/node/ts3.1/process.d.ts",
+        "./node_modules/@types/node/ts3.1/util.d.ts",
+        "./node_modules/@types/node/ts3.4/fs.d.ts",
+        "./node_modules/@types/node/ts3.4/process.d.ts",
+        "./node_modules/@types/node/ts3.4/util.d.ts",
+        "./src/models/messages.ts"
       ],
       "./src/routes/profileroute.ts": [
         "./node_modules/@types/express/index.d.ts",
@@ -3075,6 +3106,7 @@
         "./src/controllers/authentification.ts",
         "./src/database.ts",
         "./src/routes/loginroutes.ts",
+        "./src/routes/messageroutes.ts",
         "./src/routes/profileroute.ts"
       ]
     },
@@ -5054,10 +5086,16 @@
       "./src/middlewares/authenticationrequired.ts": [
         "./node_modules/@types/express/index.d.ts"
       ],
+      "./src/models/messages.ts": [
+        "./node_modules/@types/mongoose/index.d.ts"
+      ],
       "./src/models/profiles.ts": [
         "./node_modules/@types/mongoose/index.d.ts"
       ],
       "./src/routes/loginroutes.ts": [
+        "./node_modules/@types/express-serve-static-core/index.d.ts"
+      ],
+      "./src/routes/messageroutes.ts": [
         "./node_modules/@types/express-serve-static-core/index.d.ts"
       ],
       "./src/routes/profileroute.ts": [
@@ -5260,8 +5298,10 @@
       "./src/controllers/profiles.ts",
       "./src/database.ts",
       "./src/middlewares/authenticationrequired.ts",
+      "./src/models/messages.ts",
       "./src/models/profiles.ts",
       "./src/routes/loginroutes.ts",
+      "./src/routes/messageroutes.ts",
       "./src/routes/profileroute.ts",
       "./src/server.ts"
     ]
