@@ -27,19 +27,19 @@ router.get('/:conversationId', authenticationRequired, async (req: Request, res:
 	}
 });
 
-/* DELETE */
-router.delete('/:messageId', authenticationRequired, async (req: Request, res: Response) => {
-	if (!req.user) { return res.status(401).send('You must be authenticated') };
-	const { messageId } = req.params;
+/* DELETE ONE CONVERSATION */
+// router.delete('/:messageId', authenticationRequired, async (req: Request, res: Response) => {
+// 	if (!req.user) { return res.status(401).send('You must be authenticated') };
+// 	const { messageId } = req.params;
 
-	try {
-		const deletedMessage = await MessagesController.deleteMessages(messageId);
-		if (deletedMessage == null) { res.status(404).send("Message inconnu"); return; }
-		res.status(200).send('Le message a été supprimé');
-	} catch (_err) {
-		res.status(500).send("Il y a eu une erreur serveur");
-	}
-});
+// 	try {
+// 		const deletedMessage = await MessagesController.deleteMessages(messageId);
+// 		if (deletedMessage == null) { res.status(404).send("Message inconnu"); return; }
+// 		res.status(200).send('Le message a été supprimé');
+// 	} catch (_err) {
+// 		res.status(500).send("Il y a eu une erreur serveur");
+// 	}
+// });
 
 /* CREATE */
 router.post('/', async (req: Request, res: Response) => {
