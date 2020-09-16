@@ -1,6 +1,6 @@
 import { Document, Schema, model, Model } from 'mongoose';
 
-export interface IMessage extends Document {
+export interface IMessages extends Document {
 	conversationId: string;
 	emitter: string;
 	targets: string[];
@@ -8,7 +8,7 @@ export interface IMessage extends Document {
 	content: string;
 }
 
-const messageSchema = new Schema({
+const messagesSchema = new Schema({
 	conversationId: { type: String, required: true },
 	emitter: {
 		type: Schema.Types.ObjectId,
@@ -23,4 +23,4 @@ const messageSchema = new Schema({
 	content: { type: String, required: true }
 });
 
-export const Message = model<IMessage, Model<IMessage>>("message", messageSchema);
+export const Messages = model<IMessages, Model<IMessages>>("messages", messagesSchema);

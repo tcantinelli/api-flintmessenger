@@ -1,12 +1,12 @@
-import { Profile } from '../../src/models/profiles';
+import { Users } from '../../src/models/profiles';
 
-const userTest = new Profile({
+const userTest = new Users({
 	email: "thomas@mail.com",
 	lastname: "Toto",
 	firstname: "Thomas"
 });
 
-describe('Profile: GetFullName', () => {
+describe('Users: GetFullName', () => {
   it("renvoie le prénom et le nom de l'utilisateur", () => {
 	expect(userTest.getFullname()).toBe("Thomas Toto");
   });

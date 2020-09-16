@@ -1,9 +1,9 @@
-import { Profile, IProfile } from "../models/profiles";
+import { Users, IUsers } from "../models/users";
 
-export function getProfile(profileId: string): Promise<IProfile | null>{
-  return Profile.findById(profileId).then(profile => profile);
+export function getUser(userID: string): Promise<IUsers | null>{
+  return Users.findById(userID).then(user => user);
 }
 
-export function getAllProfiles(): Promise<IProfile[]>{
-  return Profile.find({}).then(profiles => profiles);
+export function getUsers(): Promise<IUsers[]>{
+  return Users.find({}).then(users => users);
 }

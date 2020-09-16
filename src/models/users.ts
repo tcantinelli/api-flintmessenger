@@ -1,14 +1,14 @@
 import { Document, Schema, model, Model } from 'mongoose';
 import { SHA256 } from 'crypto-js';
 
-export interface IProfile extends Document {
+export interface IUsers extends Document {
 	email: string;
 	lastname: string;
 	firstname: string;
 	getFullname: () => string;
 	setPassword: (password: string) => void;
 	verifyPassword: (password: string) => boolean;
-	getSafeProfile: () => ISafeProfile;
+	getSafeUser: () => ISafeUsers;
 }
 
 const profileSchema = new Schema({
@@ -32,11 +32,11 @@ profileSchema.methods.verifyPassword = function (password: string) {
 }
 
 //Type pour reponse client, sans pwd
-export type ISafeProfile = Pick<IProfile, '_id' | 'email' | 'lastname' | 'firstname'>;
+export type ISafeUsers = Pick<IUsers, '_id' | 'email' | 'lastname' | 'firstname'>;
 
-profileSchema.methods.getSafeProfile = function (): ISafeProfile {
+profileSchema.methods.getSafeUser = function (): ISafeUsers {
 	const { _id, email, lastname, firstname } = this;
 	return { _id, email, lastname, firstname };
 };
 
-export const Profile = model<IProfile, Model<IProfile>>("profile", profileSchema);
+export const Users = model<IUsers, Model<IUsers>>("profile", profileSchema);

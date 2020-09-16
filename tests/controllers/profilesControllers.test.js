@@ -1,6 +1,6 @@
 import profilesController from '../../src/controllers/profilesController;'
 
-let userTest = new Profile({
+let userTest = new Users({
 	_id: "5f5255c0702e060c94d4b3a3",
 	email: "toto@gmail.com",
 	firstname: "toto",
