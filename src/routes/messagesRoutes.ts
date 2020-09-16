@@ -1,6 +1,7 @@
 import { Request, Response, Router } from 'express';
 import { authenticationRequired } from '../middlewares/authenticationRequired';
 import MessagesController from '../controllers/messages';
+import { Users, IUsers } from "../models/users";
 
 const router = Router();
 

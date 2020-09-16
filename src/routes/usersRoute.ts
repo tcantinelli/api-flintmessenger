@@ -6,6 +6,7 @@ const router = Router();
 
 /* GET ONE*/
 router.get('/:userId', authenticationRequired, async (req: Request, res: Response) => {
+	if(!req.user) { return res.status(401).send('You must be authenticated')};
 	const { userId } = req.params;
 
 	try {
@@ -19,6 +20,7 @@ router.get('/:userId', authenticationRequired, async (req: Request, res: Respons
 
 /* DELETE */
 router.delete('/:userId', authenticationRequired, async (req: Request, res: Response) => {
+	if(!req.user) { return res.status(401).send('You must be authenticated')};
 	const { userId } = req.params;
 
 	try {
@@ -47,7 +49,8 @@ router.post('/', async (req: Request, res: Response) => {
 });
 
 /* GET ALL */
-router.get('/', async (_req: Request, res: Response) => {
+router.get('/', authenticationRequired, async (req: Request, res: Response) => {
+	if(!req.user) { return res.status(401).send('You must be authenticated')};
 	try {
 		const users = await UsersController.getUsers();
 		const safeUsers = users.map(user => user.getSafeUser());
