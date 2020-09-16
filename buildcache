@@ -561,19 +561,24 @@
         "signature": "c2b0247203d8a7f288055c1fc86d1fcf81e54d5f8e5966c7cd36bed2319b1ea1",
         "affectsGlobalScope": false
       },
+      "./src/middlewares/authenticationrequired.ts": {
+        "version": "c1c3402d3d9e8fdc50132e468bdb512985aac760743390e0e8f5a2683686ebfb",
+        "signature": "86b161933c8a4f416aafec2860166c75d4f788a65b684d54cfce61d4076c4fc9",
+        "affectsGlobalScope": false
+      },
       "./src/models/messages.ts": {
         "version": "51b0dacb318892093294132cbed53be8b5922cd42638c07b2d4ee44246987995",
         "signature": "b010379689455ef401fc7a74feb864a16cb31ff690e0a72e60a3678649ac53ff",
         "affectsGlobalScope": false
       },
-      "./src/routes/messagesroutes.ts": {
-        "version": "afe01fa49846c7d71af8070de4f5a6ef4ba058af2a62256b8432e6b4b8a4ab1a",
-        "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
+      "./src/controllers/messages.ts": {
+        "version": "dcf859f8991a1757b0b7277774d36c2490a7ae63f5cfb0a0be48b5b2b171de3a",
+        "signature": "4cbeddd24dc10e17d7a3e7e79e21d7631d02037f3ec4e40383aa084f8671c6f9",
         "affectsGlobalScope": false
       },
-      "./src/middlewares/authenticationrequired.ts": {
-        "version": "c1c3402d3d9e8fdc50132e468bdb512985aac760743390e0e8f5a2683686ebfb",
-        "signature": "86b161933c8a4f416aafec2860166c75d4f788a65b684d54cfce61d4076c4fc9",
+      "./src/routes/messagesroutes.ts": {
+        "version": "eb2df32a83ff8b545dcebc4013b14d30831c7152ad9908cf1f04fbdaf8325932",
+        "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
         "affectsGlobalScope": false
       },
       "./src/controllers/users.ts": {
@@ -582,7 +587,7 @@
         "affectsGlobalScope": false
       },
       "./src/routes/usersroute.ts": {
-        "version": "cafbe883debac1606396d86016b985d4b883661d7fe4f00e0dca506065f757b0",
+        "version": "d17404f07c6661f9a5ae129a4fae947757c9096799ce99fa6b84db35efbf4f16",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
         "affectsGlobalScope": false
       },
@@ -2998,6 +3003,16 @@
         "./node_modules/@types/passport/index.d.ts",
         "./src/models/users.ts"
       ],
+      "./src/controllers/messages.ts": [
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/ts3.1/fs.d.ts",
+        "./node_modules/@types/node/ts3.1/process.d.ts",
+        "./node_modules/@types/node/ts3.1/util.d.ts",
+        "./node_modules/@types/node/ts3.4/fs.d.ts",
+        "./node_modules/@types/node/ts3.4/process.d.ts",
+        "./node_modules/@types/node/ts3.4/util.d.ts",
+        "./src/models/messages.ts"
+      ],
       "./src/controllers/users.ts": [
         "./node_modules/@types/graceful-fs/index.d.ts",
         "./node_modules/@types/node/ts3.1/fs.d.ts",
@@ -3073,7 +3088,8 @@
         "./node_modules/@types/node/ts3.4/fs.d.ts",
         "./node_modules/@types/node/ts3.4/process.d.ts",
         "./node_modules/@types/node/ts3.4/util.d.ts",
-        "./src/models/messages.ts"
+        "./src/controllers/messages.ts",
+        "./src/middlewares/authenticationrequired.ts"
       ],
       "./src/routes/usersroute.ts": [
         "./node_modules/@types/express/index.d.ts",
@@ -3085,8 +3101,7 @@
         "./node_modules/@types/node/ts3.4/process.d.ts",
         "./node_modules/@types/node/ts3.4/util.d.ts",
         "./src/controllers/users.ts",
-        "./src/middlewares/authenticationrequired.ts",
-        "./src/models/users.ts"
+        "./src/middlewares/authenticationrequired.ts"
       ],
       "./src/server.ts": [
         "./node_modules/@types/cors/index.d.ts",
@@ -5078,6 +5093,9 @@
       "./src/controllers/authentification.ts": [
         "./node_modules/@types/express/index.d.ts"
       ],
+      "./src/controllers/messages.ts": [
+        "./src/models/messages.ts"
+      ],
       "./src/controllers/users.ts": [
         "./src/models/users.ts"
       ],
@@ -5296,6 +5314,7 @@
       "./node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "./src/config.ts",
       "./src/controllers/authentification.ts",
+      "./src/controllers/messages.ts",
       "./src/controllers/users.ts",
       "./src/database.ts",
       "./src/middlewares/authenticationrequired.ts",

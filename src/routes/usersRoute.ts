@@ -1,5 +1,4 @@
 import { Request, Response, Router } from 'express';
-import { Users } from '../models/users';
 import { authenticationRequired } from '../middlewares/authenticationRequired';
 import UsersController from '../controllers/users';
 
