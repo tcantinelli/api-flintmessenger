@@ -43,11 +43,14 @@ router.get('/:conversationId', authenticationRequired, async (req: Request, res:
 
 /* CREATE */
 router.post('/', async (req: Request, res: Response) => {
-	const { conversationId, emitter, targets, content } = req.body;
+	const user = req.user as IUsers;
+	if (!user) { return res.status(401).send('You must be authenticated') };
 
-	if (conversationId && emitter && targets && content) {
+	const { conversationId, targets, content } = req.body;
+
+	if (conversationId && targets && content) {
 		try {
-			const finalMessage = await MessagesController.addMessages(conversationId, emitter, targets, content)
+			const finalMessage = await MessagesController.addMessages(conversationId, user._id, targets, content)
 			res.status(201).send(finalMessage);
 		} catch (err) {
 			res.status(400).send('Données manquantes');
