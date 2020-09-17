@@ -5,6 +5,7 @@ export interface IUsers extends Document {
 	email: string;
 	lastname: string;
 	firstname: string;
+	conversationSeen: object;
 	getFullname: () => string;
 	setPassword: (password: string) => void;
 	verifyPassword: (password: string) => boolean;
@@ -15,7 +16,8 @@ const usersSchema = new Schema({
 	email: { type: String, required: true, unique: true },
 	firstname: { type: String, required: true },
 	lastname: { type: String, required: true },
-	password: { type: String, required: true }
+	password: { type: String, required: true },
+	conversationSeen: Object
 });
 
 
@@ -32,11 +34,11 @@ usersSchema.methods.verifyPassword = function (password: string) {
 }
 
 //Type pour reponse client, sans pwd
-export type ISafeUsers = Pick<IUsers, '_id' | 'email' | 'lastname' | 'firstname'>;
+export type ISafeUsers = Pick<IUsers, '_id' | 'email' | 'lastname' | 'firstname' | 'conversationSeen'>;
 
 usersSchema.methods.getSafeUser = function (): ISafeUsers {
-	const { _id, email, lastname, firstname } = this;
-	return { _id, email, lastname, firstname };
+	const { _id, email, lastname, firstname, conversationSeen } = this;
+	return { _id, email, lastname, firstname, conversationSeen };
 };
 
 export const Users = model<IUsers, Model<IUsers>>("users", usersSchema);

@@ -7,20 +7,14 @@ const router = Router();
 
 /* GET MAIN USER DATAS*/
 router.get("/me", authenticationRequired, async (req: Request, res: Response) => {
-	if(!req.user) { return res.status(401).send('You must be authenticated')};
-	try {
-		const theUser = (req.user as IUsers);
-		const user = await UsersController.getUser(theUser._id);
-		if (user === null) { return res.status(404).send("User not found"); }
-		return res.send(user.getSafeUser());
-	} catch (_err) {
-		return res.status(500).send()
-	}
-  });
+	const theUser = (req.user as IUsers);
+	if (!theUser) { return res.status(401).send('You must be authenticated') };
+	return res.send(theUser.getSafeUser());
+});
 
 /* GET ONE*/
 router.get('/:userId', authenticationRequired, async (req: Request, res: Response) => {
-	if(!req.user) { return res.status(401).send('You must be authenticated')};
+	if (!req.user) { return res.status(401).send('You must be authenticated') };
 	const { userId } = req.params;
 
 	try {
@@ -34,7 +28,7 @@ router.get('/:userId', authenticationRequired, async (req: Request, res: Respons
 
 /* GET ALL */
 router.get('/', authenticationRequired, async (req: Request, res: Response) => {
-	if(!req.user) { return res.status(401).send('You must be authenticated')};
+	if (!req.user) { return res.status(401).send('You must be authenticated') };
 	try {
 		const users = await UsersController.getUsers();
 		const safeUsers = users.map(user => user.getSafeUser());
@@ -43,5 +37,19 @@ router.get('/', authenticationRequired, async (req: Request, res: Response) => {
 		return res.status(500).send();
 	}
 });
+
+/* SET CONVERSATION SEEN */
+router.patch('/saw', authenticationRequired, async (req: Request, res: Response) => {
+	const theUser = (req.user as IUsers);
+	if (!theUser) { return res.status(401).send('You must be authenticated') };
+	try {
+		const { conversationId, dateSeen } = req.body;
+		if (!conversationId || !dateSeen) return res.status(500).send();
+		const user = await UsersController.setConversationSeen(theUser, conversationId, dateSeen);
+		return res.status(200).send(user?.getSafeUser());
+	} catch (_err) {
+		return res.status(500).send();
+	}
+})
 
 export default router;

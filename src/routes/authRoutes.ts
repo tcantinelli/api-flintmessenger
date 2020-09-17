@@ -46,8 +46,8 @@ router.post('/register', async (req: Request, res: Response) => {
 
 /* DELETE MAIN USER */
 router.delete('/bye', authenticationRequired, async (req: Request, res: Response) => {
-	if(!req.user) { return res.status(401).send('You must be authenticated')};
 	const theUser = (req.user as IUsers);
+	if(!theUser) { return res.status(401).send('You must be authenticated')};
 
 	try {
 		const deletedUser = await UsersController.deleteUsers(theUser._id);
