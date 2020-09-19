@@ -29,16 +29,15 @@ const UsersController = {
 		}
 	},
 
-	async setConversationSeen(user: IUsers, conversationId: string, dateSeen: Date) {
-		const upUser = await Users.findByIdAndUpdate(user._id, {
-			conversationSeen: {
-				...user.conversationSeen,
-				[conversationId]: dateSeen
-			}
-		});
-		return upUser;
+	async setConversationSeen(user: IUsers, conversationId: string, dateSeen: string) {
+		try {
+			user.updateSeen(conversationId, dateSeen);
+			const upUser = await user.save();
+			return upUser;
+		} catch (_err) {
+			throw new Error();
+		}
 	}
-
 }
 
 export default UsersController;
