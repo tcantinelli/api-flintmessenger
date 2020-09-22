@@ -582,12 +582,12 @@
         "affectsGlobalScope": false
       },
       "./src/controllers/users.ts": {
-        "version": "f44fa2d6b6ae12e57ef3acd2300e2f8f128dcde85507be96d6504de1e83510d6",
-        "signature": "e1679c37b9a38c20a4213b7dfad17a2fd5e2de14fdd3099f18efcb081d6c1b43",
+        "version": "1f91be0b546dfb58999483b921cb1e4e46e7b495f30edcbb5f0bfb07816e8f93",
+        "signature": "65c177737d5c4cea07fe8b120d8f9ae8db74678509d38c87172394287b69e156",
         "affectsGlobalScope": false
       },
       "./src/routes/usersroute.ts": {
-        "version": "245a5d9b28b838191ebbbf01fc46f6996c404940704b521d5d343d193ffcbcb9",
+        "version": "51d1fe24327cbf1645717dfc224f9eea5d81bf6d4a3b8542a5802b03aa73b562",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
         "affectsGlobalScope": false
       },

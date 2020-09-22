@@ -16,6 +16,18 @@ const UsersController = {
 		return user;
 	},
 
+	async updateUsers(user: IUsers, email:string, firstname:string, lastname:string, password:string): Promise<IUsers | null> {
+
+		user.email = email;
+		user.firstname = firstname;
+		user.lastname = lastname;
+
+		if(password.length > 0) user.setPassword(password);
+
+		const upUser = await user.save();
+		return upUser;
+	},
+
 	async addUsers(email: string, firstname: string, lastname: string, password: string): Promise<IUsers> {
 		const newUser = new Users({ email, firstname, lastname })
 
