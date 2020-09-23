@@ -14,7 +14,9 @@ import authRoutes from './routes/authRoutes';
 import session from 'express-session';
 import connectMongo from 'connect-mongo';
 import mongoose from 'mongoose';
+import { initializeSockets } from './socket';
 const MongoStore = connectMongo(session);
+const sessionStore = new MongoStore({ mongooseConnection: mongoose.connection })
 
 export function createExpressApp(config: IConfig): express.Express {
 	const { express_debug, session_secret, session_cookie_name } = config;
@@ -28,7 +30,7 @@ export function createExpressApp(config: IConfig): express.Express {
 	app.use(cors({
 		credentials: true,
 		origin: true
-	  }));
+	}));
 
 	app.use(session({
 		name: session_cookie_name,
@@ -57,5 +59,9 @@ const config = configuration();
 const { PORT } = config;
 const app = createExpressApp(config);
 connect(config).then(
-	() => { app.listen(PORT, () => console.log(`Flint messenger listening at ${PORT}`)) }
+	() => {
+		const server = app.listen(PORT, () => console.log(`Flint messenger listening at ${PORT}`))
+		// Initialise les sockets
+		initializeSockets(config, server, sessionStore);
+	}
 );
