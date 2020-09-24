@@ -621,8 +621,13 @@
         "signature": "cd5fe2f336136fbe085656fb21657b68e6401417f62c40feb6ea2bf29e619310",
         "affectsGlobalScope": false
       },
+      "./node_modules/@types/cookie-parser/index.d.ts": {
+        "version": "8d77ed4e39114c32edc2e35b683b6f54a6b3292ecdf392e4bfc5f726734955d8",
+        "signature": "8d77ed4e39114c32edc2e35b683b6f54a6b3292ecdf392e4bfc5f726734955d8",
+        "affectsGlobalScope": false
+      },
       "./src/socket.ts": {
-        "version": "044f64e328817e0b3237c297a102bf92de930a0d4339b77ff5c497a863a1334e",
+        "version": "1ddabc49a9dfc318995b94c9ffba6a9016cf0c3bfc8013306c1e1bce12ce8d1e",
         "signature": "519c4a15a223b67e507d53387a6d74d0bf2e412df3821f76b3c9b422108efc9b",
         "affectsGlobalScope": false
       },
@@ -1136,6 +1141,16 @@
         "./node_modules/@types/node/index.d.ts",
         "./node_modules/@types/node/ts3.1/fs.d.ts",
         "./node_modules/@types/node/ts3.1/http.d.ts",
+        "./node_modules/@types/node/ts3.1/process.d.ts",
+        "./node_modules/@types/node/ts3.1/util.d.ts",
+        "./node_modules/@types/node/ts3.4/fs.d.ts",
+        "./node_modules/@types/node/ts3.4/process.d.ts",
+        "./node_modules/@types/node/ts3.4/util.d.ts"
+      ],
+      "./node_modules/@types/cookie-parser/index.d.ts": [
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/ts3.1/fs.d.ts",
         "./node_modules/@types/node/ts3.1/process.d.ts",
         "./node_modules/@types/node/ts3.1/util.d.ts",
         "./node_modules/@types/node/ts3.4/fs.d.ts",
@@ -3191,6 +3206,7 @@
         "./src/socket.ts"
       ],
       "./src/socket.ts": [
+        "./node_modules/@types/cookie-parser/index.d.ts",
         "./node_modules/@types/express-session/index.d.ts",
         "./node_modules/@types/graceful-fs/index.d.ts",
         "./node_modules/@types/node/ts3.1/fs.d.ts",
@@ -3308,6 +3324,16 @@
         "./node_modules/@types/node/index.d.ts",
         "./node_modules/@types/node/ts3.1/fs.d.ts",
         "./node_modules/@types/node/ts3.1/http.d.ts",
+        "./node_modules/@types/node/ts3.1/process.d.ts",
+        "./node_modules/@types/node/ts3.1/util.d.ts",
+        "./node_modules/@types/node/ts3.4/fs.d.ts",
+        "./node_modules/@types/node/ts3.4/process.d.ts",
+        "./node_modules/@types/node/ts3.4/util.d.ts"
+      ],
+      "./node_modules/@types/cookie-parser/index.d.ts": [
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/ts3.1/fs.d.ts",
         "./node_modules/@types/node/ts3.1/process.d.ts",
         "./node_modules/@types/node/ts3.1/util.d.ts",
         "./node_modules/@types/node/ts3.4/fs.d.ts",
@@ -5264,6 +5290,7 @@
       "./node_modules/@types/bson/index.d.ts",
       "./node_modules/@types/color-name/index.d.ts",
       "./node_modules/@types/connect/index.d.ts",
+      "./node_modules/@types/cookie-parser/index.d.ts",
       "./node_modules/@types/cors/index.d.ts",
       "./node_modules/@types/cross-spawn/index.d.ts",
       "./node_modules/@types/crypto-js/index.d.ts",

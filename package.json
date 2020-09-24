@@ -5,6 +5,7 @@
   "main": "dist/server.js",
   "dependencies": {
     "@hapi/joi": "^17.1.1",
+    "@types/cookie-parser": "^1.4.2",
     "body-parser": "^1.19.0",
     "connect-mongo": "^3.2.0",
     "cookie-parser": "^1.4.5",
