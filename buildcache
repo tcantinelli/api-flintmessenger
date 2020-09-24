@@ -552,8 +552,8 @@
         "affectsGlobalScope": false
       },
       "./src/models/users.ts": {
-        "version": "4e9188a5a8dd59bda0f0c8ed582fe12ed03529044a6491f06d1ecc9609d007be",
-        "signature": "c46340f846edc3ea06b5defb9c5b4fbae2c3388191e00abb691b7c5aaa24b82f",
+        "version": "4ee442b98297f5c9d60010fe7b37846710400959681246ce9490b58c6195c55a",
+        "signature": "caa3142e39aca7799d22781bd1bf4205911b0443035f9aa920005f02b1b2795f",
         "affectsGlobalScope": false
       },
       "./src/controllers/authentification.ts": {
@@ -606,8 +606,28 @@
         "signature": "e8c80d24feb0124e305813adef906ac90d31d2bbe131327b3a3434726f3ad48c",
         "affectsGlobalScope": false
       },
+      "./node_modules/@types/engine.io/index.d.ts": {
+        "version": "2bc5a885dc91b4006192c477dfae4f2856e5809c6ffbf62cc242ac010f15ab51",
+        "signature": "2bc5a885dc91b4006192c477dfae4f2856e5809c6ffbf62cc242ac010f15ab51",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/@types/socket.io/index.d.ts": {
+        "version": "7d666a6623022683b640930047127f754d79393a29c0f51f3447325f8435809f",
+        "signature": "7d666a6623022683b640930047127f754d79393a29c0f51f3447325f8435809f",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/@types/passport.socketio/index.d.ts": {
+        "version": "cd5fe2f336136fbe085656fb21657b68e6401417f62c40feb6ea2bf29e619310",
+        "signature": "cd5fe2f336136fbe085656fb21657b68e6401417f62c40feb6ea2bf29e619310",
+        "affectsGlobalScope": false
+      },
+      "./src/socket.ts": {
+        "version": "044f64e328817e0b3237c297a102bf92de930a0d4339b77ff5c497a863a1334e",
+        "signature": "519c4a15a223b67e507d53387a6d74d0bf2e412df3821f76b3c9b422108efc9b",
+        "affectsGlobalScope": false
+      },
       "./src/server.ts": {
-        "version": "9127e0182621e3bf7ad08b317bc63caf826521668e61427f3c71c9bbbc1200aa",
+        "version": "9910404161f81c556d3de6b67e46b075279bbe14218215ea5e0fdbde7d2c6c9d",
         "signature": "81132659eb713e8c675e8ae4d5519199436a1c8c32e1e4240ab7879185679a4e",
         "affectsGlobalScope": false
       },
@@ -1170,6 +1190,19 @@
         "./node_modules/@types/node/ts3.4/process.d.ts",
         "./node_modules/@types/node/ts3.4/util.d.ts"
       ],
+      "./node_modules/@types/engine.io/index.d.ts": [
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/index.d.ts",
+        "./node_modules/@types/node/ts3.1/events.d.ts",
+        "./node_modules/@types/node/ts3.1/fs.d.ts",
+        "./node_modules/@types/node/ts3.1/http.d.ts",
+        "./node_modules/@types/node/ts3.1/net.d.ts",
+        "./node_modules/@types/node/ts3.1/process.d.ts",
+        "./node_modules/@types/node/ts3.1/util.d.ts",
+        "./node_modules/@types/node/ts3.4/fs.d.ts",
+        "./node_modules/@types/node/ts3.4/process.d.ts",
+        "./node_modules/@types/node/ts3.4/util.d.ts"
+      ],
       "./node_modules/@types/express-serve-static-core/index.d.ts": [
         "./node_modules/@types/graceful-fs/index.d.ts",
         "./node_modules/@types/node/index.d.ts",
@@ -2049,6 +2082,19 @@
         "./node_modules/@types/node/ts3.4/util.d.ts",
         "./node_modules/@types/passport/index.d.ts"
       ],
+      "./node_modules/@types/passport.socketio/index.d.ts": [
+        "./node_modules/@types/express-session/index.d.ts",
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/ts3.1/fs.d.ts",
+        "./node_modules/@types/node/ts3.1/process.d.ts",
+        "./node_modules/@types/node/ts3.1/util.d.ts",
+        "./node_modules/@types/node/ts3.4/fs.d.ts",
+        "./node_modules/@types/node/ts3.4/process.d.ts",
+        "./node_modules/@types/node/ts3.4/util.d.ts",
+        "./node_modules/@types/passport/index.d.ts",
+        "./node_modules/@types/socket.io/index.d.ts"
+      ],
       "./node_modules/@types/passport/index.d.ts": [
         "./node_modules/@types/express/index.d.ts",
         "./node_modules/@types/graceful-fs/index.d.ts",
@@ -2571,6 +2617,20 @@
         "./node_modules/@types/graceful-fs/index.d.ts",
         "./node_modules/@types/mime/index.d.ts",
         "./node_modules/@types/node/ts3.1/fs.d.ts",
+        "./node_modules/@types/node/ts3.1/process.d.ts",
+        "./node_modules/@types/node/ts3.1/util.d.ts",
+        "./node_modules/@types/node/ts3.4/fs.d.ts",
+        "./node_modules/@types/node/ts3.4/process.d.ts",
+        "./node_modules/@types/node/ts3.4/util.d.ts"
+      ],
+      "./node_modules/@types/socket.io/index.d.ts": [
+        "./node_modules/@types/engine.io/index.d.ts",
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/index.d.ts",
+        "./node_modules/@types/node/ts3.1/events.d.ts",
+        "./node_modules/@types/node/ts3.1/fs.d.ts",
+        "./node_modules/@types/node/ts3.1/http.d.ts",
+        "./node_modules/@types/node/ts3.1/https.d.ts",
         "./node_modules/@types/node/ts3.1/process.d.ts",
         "./node_modules/@types/node/ts3.1/util.d.ts",
         "./node_modules/@types/node/ts3.4/fs.d.ts",
@@ -3127,7 +3187,24 @@
         "./src/database.ts",
         "./src/routes/authroutes.ts",
         "./src/routes/messagesroutes.ts",
-        "./src/routes/usersroute.ts"
+        "./src/routes/usersroute.ts",
+        "./src/socket.ts"
+      ],
+      "./src/socket.ts": [
+        "./node_modules/@types/express-session/index.d.ts",
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/ts3.1/fs.d.ts",
+        "./node_modules/@types/node/ts3.1/http.d.ts",
+        "./node_modules/@types/node/ts3.1/process.d.ts",
+        "./node_modules/@types/node/ts3.1/util.d.ts",
+        "./node_modules/@types/node/ts3.4/fs.d.ts",
+        "./node_modules/@types/node/ts3.4/process.d.ts",
+        "./node_modules/@types/node/ts3.4/util.d.ts",
+        "./node_modules/@types/passport.socketio/index.d.ts",
+        "./node_modules/@types/passport/index.d.ts",
+        "./node_modules/@types/socket.io/index.d.ts",
+        "./src/config.ts",
+        "./src/models/users.ts"
       ]
     },
     "exportedModulesMap": {
@@ -3279,6 +3356,19 @@
       "./node_modules/@types/dedent/index.d.ts": [
         "./node_modules/@types/graceful-fs/index.d.ts",
         "./node_modules/@types/node/ts3.1/fs.d.ts",
+        "./node_modules/@types/node/ts3.1/process.d.ts",
+        "./node_modules/@types/node/ts3.1/util.d.ts",
+        "./node_modules/@types/node/ts3.4/fs.d.ts",
+        "./node_modules/@types/node/ts3.4/process.d.ts",
+        "./node_modules/@types/node/ts3.4/util.d.ts"
+      ],
+      "./node_modules/@types/engine.io/index.d.ts": [
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/index.d.ts",
+        "./node_modules/@types/node/ts3.1/events.d.ts",
+        "./node_modules/@types/node/ts3.1/fs.d.ts",
+        "./node_modules/@types/node/ts3.1/http.d.ts",
+        "./node_modules/@types/node/ts3.1/net.d.ts",
         "./node_modules/@types/node/ts3.1/process.d.ts",
         "./node_modules/@types/node/ts3.1/util.d.ts",
         "./node_modules/@types/node/ts3.4/fs.d.ts",
@@ -4164,6 +4254,19 @@
         "./node_modules/@types/node/ts3.4/util.d.ts",
         "./node_modules/@types/passport/index.d.ts"
       ],
+      "./node_modules/@types/passport.socketio/index.d.ts": [
+        "./node_modules/@types/express-session/index.d.ts",
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/ts3.1/fs.d.ts",
+        "./node_modules/@types/node/ts3.1/process.d.ts",
+        "./node_modules/@types/node/ts3.1/util.d.ts",
+        "./node_modules/@types/node/ts3.4/fs.d.ts",
+        "./node_modules/@types/node/ts3.4/process.d.ts",
+        "./node_modules/@types/node/ts3.4/util.d.ts",
+        "./node_modules/@types/passport/index.d.ts",
+        "./node_modules/@types/socket.io/index.d.ts"
+      ],
       "./node_modules/@types/passport/index.d.ts": [
         "./node_modules/@types/express/index.d.ts",
         "./node_modules/@types/graceful-fs/index.d.ts",
@@ -4692,6 +4795,20 @@
         "./node_modules/@types/node/ts3.4/process.d.ts",
         "./node_modules/@types/node/ts3.4/util.d.ts"
       ],
+      "./node_modules/@types/socket.io/index.d.ts": [
+        "./node_modules/@types/engine.io/index.d.ts",
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/index.d.ts",
+        "./node_modules/@types/node/ts3.1/events.d.ts",
+        "./node_modules/@types/node/ts3.1/fs.d.ts",
+        "./node_modules/@types/node/ts3.1/http.d.ts",
+        "./node_modules/@types/node/ts3.1/https.d.ts",
+        "./node_modules/@types/node/ts3.1/process.d.ts",
+        "./node_modules/@types/node/ts3.1/util.d.ts",
+        "./node_modules/@types/node/ts3.4/fs.d.ts",
+        "./node_modules/@types/node/ts3.4/process.d.ts",
+        "./node_modules/@types/node/ts3.4/util.d.ts"
+      ],
       "./node_modules/@types/stack-utils/index.d.ts": [
         "./node_modules/@types/graceful-fs/index.d.ts",
         "./node_modules/@types/node/ts3.1/fs.d.ts",
@@ -5128,6 +5245,12 @@
       "./src/server.ts": [
         "./node_modules/@types/express/index.d.ts",
         "./src/config.ts"
+      ],
+      "./src/socket.ts": [
+        "./node_modules/@types/express-session/index.d.ts",
+        "./node_modules/@types/node/ts3.1/http.d.ts",
+        "./node_modules/@types/socket.io/index.d.ts",
+        "./src/config.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -5146,6 +5269,7 @@
       "./node_modules/@types/crypto-js/index.d.ts",
       "./node_modules/@types/debug/index.d.ts",
       "./node_modules/@types/dedent/index.d.ts",
+      "./node_modules/@types/engine.io/index.d.ts",
       "./node_modules/@types/express-serve-static-core/index.d.ts",
       "./node_modules/@types/express-session/index.d.ts",
       "./node_modules/@types/express/index.d.ts",
@@ -5228,6 +5352,7 @@
       "./node_modules/@types/normalize-package-data/index.d.ts",
       "./node_modules/@types/passport-local/index.d.ts",
       "./node_modules/@types/passport-strategy/index.d.ts",
+      "./node_modules/@types/passport.socketio/index.d.ts",
       "./node_modules/@types/passport/index.d.ts",
       "./node_modules/@types/prettier/index.d.ts",
       "./node_modules/@types/qs/index.d.ts",
@@ -5273,6 +5398,7 @@
       "./node_modules/@types/semver/ranges/to-comparators.d.ts",
       "./node_modules/@types/semver/ranges/valid.d.ts",
       "./node_modules/@types/serve-static/index.d.ts",
+      "./node_modules/@types/socket.io/index.d.ts",
       "./node_modules/@types/stack-utils/index.d.ts",
       "./node_modules/@types/tmp/index.d.ts",
       "./node_modules/@types/uuid/index.d.ts",
@@ -5328,7 +5454,8 @@
       "./src/routes/authroutes.ts",
       "./src/routes/messagesroutes.ts",
       "./src/routes/usersroute.ts",
-      "./src/server.ts"
+      "./src/server.ts",
+      "./src/socket.ts"
     ]
   },
   "version": "4.0.2"
