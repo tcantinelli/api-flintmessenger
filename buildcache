@@ -576,8 +576,38 @@
         "signature": "31f3222c7bcfe6eaa2a18faca0bce8b225a15fccb5f0f0e1cd86d835db0e9b9c",
         "affectsGlobalScope": false
       },
+      "./node_modules/@types/engine.io/index.d.ts": {
+        "version": "2bc5a885dc91b4006192c477dfae4f2856e5809c6ffbf62cc242ac010f15ab51",
+        "signature": "2bc5a885dc91b4006192c477dfae4f2856e5809c6ffbf62cc242ac010f15ab51",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/@types/socket.io/index.d.ts": {
+        "version": "7d666a6623022683b640930047127f754d79393a29c0f51f3447325f8435809f",
+        "signature": "7d666a6623022683b640930047127f754d79393a29c0f51f3447325f8435809f",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/@types/express-session/index.d.ts": {
+        "version": "3e03ea3c4d568a10e41f540bc891c5fb42c036a430187132e599176f7974eaf7",
+        "signature": "3e03ea3c4d568a10e41f540bc891c5fb42c036a430187132e599176f7974eaf7",
+        "affectsGlobalScope": true
+      },
+      "./node_modules/@types/passport.socketio/index.d.ts": {
+        "version": "cd5fe2f336136fbe085656fb21657b68e6401417f62c40feb6ea2bf29e619310",
+        "signature": "cd5fe2f336136fbe085656fb21657b68e6401417f62c40feb6ea2bf29e619310",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/@types/cookie-parser/index.d.ts": {
+        "version": "8d77ed4e39114c32edc2e35b683b6f54a6b3292ecdf392e4bfc5f726734955d8",
+        "signature": "8d77ed4e39114c32edc2e35b683b6f54a6b3292ecdf392e4bfc5f726734955d8",
+        "affectsGlobalScope": false
+      },
+      "./src/socket.ts": {
+        "version": "1ddabc49a9dfc318995b94c9ffba6a9016cf0c3bfc8013306c1e1bce12ce8d1e",
+        "signature": "519c4a15a223b67e507d53387a6d74d0bf2e412df3821f76b3c9b422108efc9b",
+        "affectsGlobalScope": false
+      },
       "./src/routes/messagesroutes.ts": {
-        "version": "76caf1a215bc1331096c5b5dcb1485b3aa927a08e203f5317d84a50c4517da40",
+        "version": "ae96110ed3c01c0702832d993c9b08f6d1636d75a232164b00d0745cddc6b9b7",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
         "affectsGlobalScope": false
       },
@@ -596,39 +626,9 @@
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
         "affectsGlobalScope": false
       },
-      "./node_modules/@types/express-session/index.d.ts": {
-        "version": "3e03ea3c4d568a10e41f540bc891c5fb42c036a430187132e599176f7974eaf7",
-        "signature": "3e03ea3c4d568a10e41f540bc891c5fb42c036a430187132e599176f7974eaf7",
-        "affectsGlobalScope": true
-      },
       "./node_modules/connect-mongo/src/types.d.ts": {
         "version": "e8c80d24feb0124e305813adef906ac90d31d2bbe131327b3a3434726f3ad48c",
         "signature": "e8c80d24feb0124e305813adef906ac90d31d2bbe131327b3a3434726f3ad48c",
-        "affectsGlobalScope": false
-      },
-      "./node_modules/@types/engine.io/index.d.ts": {
-        "version": "2bc5a885dc91b4006192c477dfae4f2856e5809c6ffbf62cc242ac010f15ab51",
-        "signature": "2bc5a885dc91b4006192c477dfae4f2856e5809c6ffbf62cc242ac010f15ab51",
-        "affectsGlobalScope": false
-      },
-      "./node_modules/@types/socket.io/index.d.ts": {
-        "version": "7d666a6623022683b640930047127f754d79393a29c0f51f3447325f8435809f",
-        "signature": "7d666a6623022683b640930047127f754d79393a29c0f51f3447325f8435809f",
-        "affectsGlobalScope": false
-      },
-      "./node_modules/@types/passport.socketio/index.d.ts": {
-        "version": "cd5fe2f336136fbe085656fb21657b68e6401417f62c40feb6ea2bf29e619310",
-        "signature": "cd5fe2f336136fbe085656fb21657b68e6401417f62c40feb6ea2bf29e619310",
-        "affectsGlobalScope": false
-      },
-      "./node_modules/@types/cookie-parser/index.d.ts": {
-        "version": "8d77ed4e39114c32edc2e35b683b6f54a6b3292ecdf392e4bfc5f726734955d8",
-        "signature": "8d77ed4e39114c32edc2e35b683b6f54a6b3292ecdf392e4bfc5f726734955d8",
-        "affectsGlobalScope": false
-      },
-      "./src/socket.ts": {
-        "version": "1ddabc49a9dfc318995b94c9ffba6a9016cf0c3bfc8013306c1e1bce12ce8d1e",
-        "signature": "519c4a15a223b67e507d53387a6d74d0bf2e412df3821f76b3c9b422108efc9b",
         "affectsGlobalScope": false
       },
       "./src/server.ts": {
@@ -3167,7 +3167,8 @@
         "./node_modules/@types/node/ts3.4/util.d.ts",
         "./src/controllers/messages.ts",
         "./src/middlewares/authenticationrequired.ts",
-        "./src/models/users.ts"
+        "./src/models/users.ts",
+        "./src/socket.ts"
       ],
       "./src/routes/usersroute.ts": [
         "./node_modules/@types/express/index.d.ts",

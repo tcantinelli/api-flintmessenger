@@ -1,7 +1,8 @@
 import { Request, Response, Router } from 'express';
 import { authenticationRequired } from '../middlewares/authenticationRequired';
 import MessagesController from '../controllers/messages';
-import { IUsers } from "../models/users";
+import { IUsers, Users } from "../models/users";
+import { io } from "../socket";
 
 const router = Router();
 
@@ -49,16 +50,23 @@ router.post('/', async (req: Request, res: Response) => {
 	const { conversationId, targets, content } = req.body;
 
 	if (conversationId && targets && content) {
-		try {
-			const finalMessage = await MessagesController.addMessages(conversationId, user._id, targets, content)
-			res.status(201).send(finalMessage);
-		} catch (err) {
-			res.status(400).send('Données manquantes');
-		};
+		const finalMessage = await MessagesController.addMessages(conversationId, user._id, targets, content)
+		res.status(201).send(finalMessage);
+
+		return await Promise.all(
+			finalMessage.targets.map(async (target) => {
+			  const profile = await Users.findById(target)
+			  const socketId = profile?.socket;
+			  if(socketId){
+				io.to(socketId).emit('chat-message', finalMessage.toJSON())
+			  }
+			})
+		  )
+	} else {
+		res.status(400).send('Données manquantes');
 	};
 });
 
 /* GET ONE */
-
 
 export default router;
