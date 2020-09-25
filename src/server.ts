@@ -40,7 +40,7 @@ export function createExpressApp(config: IConfig): express.Express {
 		resave: false,
 		saveUninitialized: false,
 		cookie: {
-			sameSite: false,
+			sameSite: 'none',
 			secure: true,
 			httpOnly: true
 		},
