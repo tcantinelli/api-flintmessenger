@@ -32,13 +32,15 @@ export function createExpressApp(config: IConfig): express.Express {
 		origin: true
 	}));
 
+	app.set('trust proxy', 1);
+
 	app.use(session({
 		name: session_cookie_name,
 		secret: session_secret,
 		resave: false,
 		saveUninitialized: false,
 		cookie: {
-			sameSite: true,
+			sameSite: false,
 			secure: true,
 			httpOnly: true
 		},
