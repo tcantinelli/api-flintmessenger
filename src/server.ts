@@ -38,8 +38,7 @@ export function createExpressApp(config: IConfig): express.Express {
 		resave: false,
 		saveUninitialized: false,
 		cookie: {
-			sameSite: "none",
-			secure: true
+			sameSite: "lax"
 		},
 		store: new MongoStore({ mongooseConnection: mongoose.connection })
 	}))
