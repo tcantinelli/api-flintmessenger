@@ -7,6 +7,7 @@ export interface IUsers extends Document {
 	firstname: string;
 	conversationSeen: { [conversationId: string]: string; };
 	socket?: string;
+	connected: boolean;
 	getFullname: () => string;
 	setPassword: (password: string) => void;
 	verifyPassword: (password: string) => boolean;
@@ -20,6 +21,7 @@ const usersSchema = new Schema({
 	lastname: { type: String, required: true },
 	password: { type: String, required: true },
 	socket: { type: String },
+	connected: { type: Boolean },
 	conversationSeen: Object
 });
 
@@ -37,15 +39,15 @@ usersSchema.methods.verifyPassword = function (password: string) {
 }
 
 usersSchema.methods.updateSeen = function (conversationId: string, seenDate: string): void {
-	this.conversationSeen = {...this.conversationSeen, [conversationId]: seenDate}
+	this.conversationSeen = { ...this.conversationSeen, [conversationId]: seenDate }
 };
 
 //Type pour reponse client, sans pwd
-export type ISafeUsers = Pick<IUsers, '_id' | 'email' | 'lastname' | 'firstname' | 'conversationSeen'>;
+export type ISafeUsers = Pick<IUsers, '_id' | 'email' | 'lastname' | 'firstname' | 'conversationSeen' | 'connected'>;
 
 usersSchema.methods.getSafeUser = function (): ISafeUsers {
-	const { _id, email, lastname, firstname, conversationSeen } = this;
-	return { _id, email, lastname, firstname, conversationSeen };
+	const { _id, email, lastname, firstname, conversationSeen, connected } = this;
+	return { _id, email, lastname, firstname, conversationSeen, connected };
 };
 
 export const Users = model<IUsers, Model<IUsers>>("users", usersSchema);

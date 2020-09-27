@@ -26,7 +26,6 @@ export function createExpressApp(config: IConfig): express.Express {
 	app.use(morgan('combined'));
 	app.use(helmet());
 	app.use(express.json());
-	// app.use(cors({credentials: true, origin: true}));
 	app.use(cors({
 		credentials: true,
 		origin: true
@@ -39,11 +38,11 @@ export function createExpressApp(config: IConfig): express.Express {
 		secret: session_secret,
 		resave: false,
 		saveUninitialized: false,
-		cookie: {
-			sameSite: 'none',
-			secure: true,
-			httpOnly: true
-		},
+		// cookie: {
+		// 	sameSite: 'none',
+		// 	secure: true,
+		// 	httpOnly: true
+		// },
 		store: new MongoStore({ mongooseConnection: mongoose.connection })
 	}))
 
