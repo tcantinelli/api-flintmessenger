@@ -1,12 +1,7 @@
 import { Messages, IMessages } from "../models/messages";
-import { Users, IUsers } from "../models/users";
+import { IUsers } from "../models/users";
 
 const MessagesController = {
-	// async getMessage(MessageID: string): Promise<IMessages | null> {
-	// 	const message = await Messages.findById(MessageID);
-	// 	return message;
-	// },
-
 	async getMessages(user: IUsers, conversationId?: string): Promise<IMessages[]> {
 		try {
 			const userId = user._id;
@@ -33,8 +28,8 @@ const MessagesController = {
 		return message;
 	},
 
-	async addMessages(conversationId: string, emitter: string, targets: string[], content: string): Promise<IMessages> {
-		const newMessage = new Messages({ conversationId, emitter, targets, content });
+	async addMessages(conversationId: string, emitter: string, targets: string[], content: string, createdAt: Date): Promise<IMessages> {
+		const newMessage = new Messages({ conversationId, emitter, targets, content, createdAt });
 
 		try {
 			const message = await newMessage.save();

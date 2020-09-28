@@ -33,10 +33,10 @@ router.post('/', async (req: Request, res: Response) => {
 	const user = req.user as IUsers;
 	if (!user) { return res.status(401).send('You must be authenticated') };
 
-	const { conversationId, targets, content } = req.body;
+	const { conversationId, targets, content, createdAt } = req.body;
 
 	if (conversationId && targets && content) {
-		const finalMessage = await MessagesController.addMessages(conversationId, user._id, targets, content)
+		const finalMessage = await MessagesController.addMessages(conversationId, user._id, targets, content, createdAt)
 		res.status(201).send(finalMessage);
 
 		return await Promise.all(

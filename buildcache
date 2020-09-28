@@ -572,8 +572,8 @@
         "affectsGlobalScope": false
       },
       "./src/controllers/messages.ts": {
-        "version": "064d4324b1cd075c617c3e42685d14c9296a89d731b7074e969bde3adc84b8cc",
-        "signature": "31f3222c7bcfe6eaa2a18faca0bce8b225a15fccb5f0f0e1cd86d835db0e9b9c",
+        "version": "c4c921d21f1d8bd3df108025e94973b35d1eab13ca2d9910b2eacbf143a06690",
+        "signature": "14063436f2921ceb39164e6cbfc2bdd3f0176985cf0f5eaf9aa44c169fc5d6c2",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/engine.io/index.d.ts": {
@@ -602,12 +602,12 @@
         "affectsGlobalScope": false
       },
       "./src/socket.ts": {
-        "version": "9ab022eec63e025fa3fca2bc50357169703ba9519624af3ccd5e3495becd4308",
+        "version": "b7d64e31ec82c360501b21c10b63a48f9525c731cfc63dc8ed2d2e7a3629e8bd",
         "signature": "519c4a15a223b67e507d53387a6d74d0bf2e412df3821f76b3c9b422108efc9b",
         "affectsGlobalScope": false
       },
       "./src/routes/messagesroutes.ts": {
-        "version": "04e83cac840e69156fc91e686fec4ff7347244da83baa6888ebc0bc079f9e9f5",
+        "version": "3a29648aa5b38affa9bf20c5715b464060c6ac8a07638204207d141a228ac573",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
         "affectsGlobalScope": false
       },
