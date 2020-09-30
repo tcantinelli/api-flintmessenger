@@ -31,26 +31,43 @@ export function createExpressApp(config: IConfig): express.Express {
 		origin: true
 	}));
 
-	app.set('trust proxy', 1);
+	// app.set('trust proxy', 1);
 
-	app.use(session({
+	// app.use(session({
+	// 	name: session_cookie_name,
+	// 	secret: session_secret,
+	// 	resave: false,
+	// 	saveUninitialized: false,
+	// 	// cookie: {
+	// 	// 	sameSite: 'none',
+	// 	// 	secure: true,
+	// 	// 	httpOnly: true
+	// 	// },
+	// 	cookie: {
+	// 		sameSite: 'none',
+	// 		secure: true,
+	// 		httpOnly: true,
+	// 		domain: '.safe-shore-53983.herokuapp.com'
+	// 	},
+	// 	store: new MongoStore({ mongooseConnection: mongoose.connection })
+	// }))
+	const sessionConfig: session.SessionOptions = {
 		name: session_cookie_name,
 		secret: session_secret,
 		resave: false,
 		saveUninitialized: false,
-		// cookie: {
-		// 	sameSite: 'none',
-		// 	secure: true,
-		// 	httpOnly: true
-		// },
-		cookie: {
-			sameSite: 'none',
+		store: sessionStore,
+		cookie: {}
+	}
+
+	if (process.env.NODE_ENV === 'production') {
+		app.set('trust proxy', 1); // trust first proxy
+		sessionConfig.cookie = {
 			secure: true,
-			httpOnly: true,
-			domain: '.safe-shore-53983.herokuapp.com'
-		},
-		store: new MongoStore({ mongooseConnection: mongoose.connection })
-	}))
+			sameSite: 'none'
+		}
+	}
+	app.use(session(sessionConfig))
 
 	app.use(authenticationInitialize());
 	app.use(authenticationSession());
