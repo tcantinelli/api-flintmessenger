@@ -44,9 +44,10 @@ export function createExpressApp(config: IConfig): express.Express {
 		// 	httpOnly: true
 		// },
 		cookie: {
-			sameSite: 'lax',
+			sameSite: 'none',
 			secure: true,
-			httpOnly: true
+			httpOnly: true,
+			domain: '.safe-shore-53983.herokuapp.com'
 		},
 		store: new MongoStore({ mongooseConnection: mongoose.connection })
 	}))
