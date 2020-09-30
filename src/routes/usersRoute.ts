@@ -2,6 +2,7 @@ import { Request, Response, Router } from 'express';
 import { authenticationRequired } from '../middlewares/authenticationRequired';
 import UsersController from '../controllers/users';
 import { IUsers } from '../models/users';
+import { io } from "../socket";
 
 const router = Router();
 
@@ -68,6 +69,9 @@ router.patch('/saw', authenticationRequired, async (req: Request, res: Response)
 		const { conversationId, dateSeen } = req.body;
 		if (!conversationId || !dateSeen) return res.status(500).send();
 		const user = await UsersController.setConversationSeen(theUser, conversationId, dateSeen);
+
+		//Send the notification to other targeted users
+		io.emit('user-update', user.getSafeUser());
 		return res.status(200).send(user?.getSafeUser());
 	} catch (_err) {
 		return res.status(500).send();

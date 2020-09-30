@@ -38,7 +38,7 @@ async function connect(socket: Socket): Promise<void> {
 	user.connected = true;
 	await user.save();
 	socket.on('disconnect', () => disconnect(socket, _id));
-	io.emit('user-update', user.getSafeUser());
+	io.emit('user-connexion', user.getSafeUser());
 }
 
 async function disconnect(socket: Socket, _id: string): Promise<void> {
@@ -48,7 +48,7 @@ async function disconnect(socket: Socket, _id: string): Promise<void> {
 	user.connected = false;
 	delete user.socket;
 	await user.save();
-	io.emit('user-update', user.getSafeUser());
+	io.emit('user-connexion', user.getSafeUser());
 }
 
 function closeSocket(socket: Socket): void {
