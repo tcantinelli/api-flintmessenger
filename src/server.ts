@@ -38,8 +38,13 @@ export function createExpressApp(config: IConfig): express.Express {
 		secret: session_secret,
 		resave: false,
 		saveUninitialized: false,
+		// cookie: {
+		// 	sameSite: 'none',
+		// 	secure: true,
+		// 	httpOnly: true
+		// },
 		cookie: {
-			sameSite: 'none',
+			sameSite: 'lax',
 			secure: true,
 			httpOnly: true
 		},
