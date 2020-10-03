@@ -39,9 +39,7 @@ export function createExpressApp(config: IConfig): express.Express {
 		store: sessionStore,
 		cookie: {
 			secure: true,
-			sameSite: 'none',
-			httpOnly: true,
-			// domain: '.safe-shore-53983.herokuapp.com'
+			sameSite: 'none'
 		},
 	}
 
@@ -49,8 +47,7 @@ export function createExpressApp(config: IConfig): express.Express {
 		app.set('trust proxy', 1); // trust first proxy
 		sessionConfig.cookie = {
 			secure: true,
-			sameSite: 'none',
-			httpOnly: true,
+			sameSite: 'none'
 		}
 	}
 	app.use(session(sessionConfig))
