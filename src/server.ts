@@ -31,26 +31,6 @@ export function createExpressApp(config: IConfig): express.Express {
 		origin: true
 	}));
 
-	// app.set('trust proxy', 1);
-
-	// app.use(session({
-	// 	name: session_cookie_name,
-	// 	secret: session_secret,
-	// 	resave: false,
-	// 	saveUninitialized: false,
-	// 	// cookie: {
-	// 	// 	sameSite: 'none',
-	// 	// 	secure: true,
-	// 	// 	httpOnly: true
-	// 	// },
-		// cookie: {
-		// 	sameSite: 'none',
-		// 	secure: true,
-		// 	httpOnly: true,
-		// 	domain: '.safe-shore-53983.herokuapp.com'
-		// },
-	// 	store: new MongoStore({ mongooseConnection: mongoose.connection })
-	// }))
 	const sessionConfig: session.SessionOptions = {
 		name: session_cookie_name,
 		secret: session_secret,
@@ -61,7 +41,7 @@ export function createExpressApp(config: IConfig): express.Express {
 			secure: true,
 			sameSite: 'none',
 			httpOnly: true,
-			domain: '.safe-shore-53983.herokuapp.com'
+			// domain: '.safe-shore-53983.herokuapp.com'
 		},
 	}
 

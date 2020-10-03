@@ -602,7 +602,7 @@
         "affectsGlobalScope": false
       },
       "./src/socket.ts": {
-        "version": "53b36281fc71b20937a21e5c34d2f13d96aac32a40249d98e0c4389ad7daba96",
+        "version": "d578ceb0de66cea7746ccc1bb9d888d9a7b1fc0717daa21590307e21d5a91fa6",
         "signature": "519c4a15a223b67e507d53387a6d74d0bf2e412df3821f76b3c9b422108efc9b",
         "affectsGlobalScope": false
       },
@@ -632,7 +632,7 @@
         "affectsGlobalScope": false
       },
       "./src/server.ts": {
-        "version": "e6b8ba400400a58fbcfc27071946a3a9a157d293fd1c8bfab220d47708aecb4a",
+        "version": "79b9af9829d0295c33afe4fc09a251bf94fe0d7f7092500fb4e475a885c79d01",
         "signature": "81132659eb713e8c675e8ae4d5519199436a1c8c32e1e4240ab7879185679a4e",
         "affectsGlobalScope": false
       },
