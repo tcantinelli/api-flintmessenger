@@ -12,7 +12,7 @@ export let io: SocketServer;
 
 export function initializeSockets(config: IConfig, httpServer: HTTPServer, sessionStore: Store): SocketServer {
 	const { session_cookie_name, session_secret } = config;
-	io = socketIO(httpServer, { cookie: false });
+	io = socketIO(httpServer);
 	io.use(
 		passportSocketIo.authorize({
 			key: session_cookie_name,
