@@ -37,18 +37,18 @@ export function createExpressApp(config: IConfig): express.Express {
 		resave: false,
 		saveUninitialized: false,
 		store: sessionStore,
-		cookie: {
-			secure: true,
-			sameSite: 'none'
-		},
+		// cookie: {
+		// 	secure: true,
+		// 	sameSite: 'none'
+		// },
 	}
 
 	if (process.env.NODE_ENV === 'production') {
 		app.set('trust proxy', 1); // trust first proxy
-		sessionConfig.cookie = {
-			secure: true,
-			sameSite: 'none'
-		}
+		// sessionConfig.cookie = {
+		// 	secure: true,
+		// 	sameSite: 'none'
+		// }
 	}
 	app.use(session(sessionConfig))
 
