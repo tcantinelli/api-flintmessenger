@@ -602,7 +602,7 @@
         "affectsGlobalScope": false
       },
       "./src/socket.ts": {
-        "version": "53b36281fc71b20937a21e5c34d2f13d96aac32a40249d98e0c4389ad7daba96",
+        "version": "633ea94918935817244f484539f024ae947c11845e86956df2f7185fd44e7d25",
         "signature": "519c4a15a223b67e507d53387a6d74d0bf2e412df3821f76b3c9b422108efc9b",
         "affectsGlobalScope": false
       },
@@ -622,7 +622,7 @@
         "affectsGlobalScope": false
       },
       "./src/routes/authroutes.ts": {
-        "version": "6e83a7e4990387fc02d70e506b246fd92917e4cc32b4e3dec61ed46bfa03ac63",
+        "version": "5066e7286ad193e43a524ac2169c2bdfac5ac98a6f3339d796ad4a4e3e5b5040",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
         "affectsGlobalScope": false
       },
@@ -632,7 +632,7 @@
         "affectsGlobalScope": false
       },
       "./src/server.ts": {
-        "version": "2f18cb170c6526cb826301dc5d6bf75b763493cfc56bd12295c45035c0e4bb8d",
+        "version": "d9ad1f35ea48cf9101d899f8ac7cb5ac1f391f1c276704b070087a95fc320503",
         "signature": "81132659eb713e8c675e8ae4d5519199436a1c8c32e1e4240ab7879185679a4e",
         "affectsGlobalScope": false
       },
@@ -3154,7 +3154,8 @@
         "./src/controllers/authentification.ts",
         "./src/controllers/users.ts",
         "./src/middlewares/authenticationrequired.ts",
-        "./src/models/users.ts"
+        "./src/models/users.ts",
+        "./src/socket.ts"
       ],
       "./src/routes/messagesroutes.ts": [
         "./node_modules/@types/express/index.d.ts",

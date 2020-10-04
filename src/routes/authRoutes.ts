@@ -4,6 +4,7 @@ import { IUsers } from '../models/users';
 import { UserNotFoundError } from '../controllers/authentification';
 import UsersController from '../controllers/users';
 import { authenticationRequired } from '../middlewares/authenticationRequired';
+import { io } from "../socket";
 
 const router = Router();
 
@@ -46,15 +47,19 @@ router.post('/register', async (req: Request, res: Response) => {
 
 /* LOGOUT */
 router.get('/logout', authenticationRequired, async (req: Request, res: Response) => {
-	if (!req.user) { return res.status(401).send('You must be authenticated') };
+	const user = req.user as IUsers;
+
+	if (!user) { return res.status(401).send('You must be authenticated') };
 	req.logout()
 	req.session?.destroy((error) => {
 		if (error) {
 			return res.status(200).send('User logout success but session not destroy')
 		}
 		else {
-			res.clearCookie('session_cookie_id');
+			res.clearCookie('session_id');
 			req.session = undefined;
+			//Stop socket connection
+			if(user.socket)	io.sockets.sockets[user.socket].disconnect();
 			return res.status(200).send('User logout success')
 		}
 	})
