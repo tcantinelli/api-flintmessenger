@@ -44,10 +44,28 @@ router.post('/register', async (req: Request, res: Response) => {
 	}
 });
 
+/* LOGOUT */
+router.get('/logout', authenticationRequired, async (req: Request, res: Response) => {
+	const theUser = (req.user as IUsers);
+
+	if (!req.user) { return res.status(401).send('You must be authenticated') };
+	req.logout()
+	req.session?.destroy((error) => {
+		if (error) {
+			return res.status(200).send('User logout success but session not destroy')
+		}
+		else {
+			res.clearCookie('session_cookie_id');
+			req.session = undefined;
+			return res.status(200).send('User logout success')
+		}
+	})
+})
+
 /* DELETE MAIN USER */
 router.delete('/bye', authenticationRequired, async (req: Request, res: Response) => {
 	const theUser = (req.user as IUsers);
-	if(!theUser) { return res.status(401).send('You must be authenticated')};
+	if (!theUser) { return res.status(401).send('You must be authenticated') };
 
 	try {
 		const deletedUser = await UsersController.deleteUsers(theUser._id);

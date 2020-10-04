@@ -30,8 +30,6 @@ async function connect(socket: Socket): Promise<void> {
 	const _id: string = (socket.request.user as any)._id;
 	actives.add(socket);
 	const user = await Users.findById(_id);
-	console.log(user);
-	
 	if (!user) {
 		closeSocket(socket);
 		return exitUserNotFound(_id);
