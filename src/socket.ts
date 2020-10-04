@@ -42,6 +42,8 @@ async function connect(socket: Socket): Promise<void> {
 }
 
 async function disconnect(socket: Socket, _id: string): Promise<void> {
+	console.log('discoooonect');
+	
 	closeSocket(socket);
 	const user = await Users.findById(_id);
 	if (!user) return exitUserNotFound(_id);
