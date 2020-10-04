@@ -45,7 +45,7 @@ router.post('/register', async (req: Request, res: Response) => {
 });
 
 /* LOGOUT */
-router.get('/logout', async (req: Request, res: Response) => {
+router.get('/logout', authenticationRequired, async (req: Request, res: Response) => {
 	if (!req.user) { return res.status(401).send('You must be authenticated') };
 	req.logout()
 	req.session?.destroy((error) => {
