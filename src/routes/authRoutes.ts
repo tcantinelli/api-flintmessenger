@@ -4,7 +4,7 @@ import { IUsers } from '../models/users';
 import { UserNotFoundError } from '../controllers/authentification';
 import UsersController from '../controllers/users';
 import { authenticationRequired } from '../middlewares/authenticationRequired';
-import { connectMe, io } from "../socket";
+import { io } from "../socket";
 
 const router = Router();
 
