@@ -73,6 +73,10 @@ router.delete('/bye', authenticationRequired, async (req: Request, res: Response
 	try {
 		const deletedUser = await UsersController.deleteUsers(theUser._id);
 		if (deletedUser == null) { res.status(404).send("Utilisateur inconnu"); return; }
+		res.clearCookie('session_id');
+			req.session = undefined;
+			//Stop socket connection
+			if(deletedUser.socket)	io.sockets.sockets[deletedUser.socket].disconnect();
 		res.status(200).send('L\'utilisateur a été supprimé');
 	} catch (_err) {
 		res.status(500).send("Il y a eu une erreur serveur");
