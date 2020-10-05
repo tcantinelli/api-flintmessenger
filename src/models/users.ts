@@ -8,6 +8,7 @@ export interface IUsers extends Document {
 	conversationSeen: { [conversationId: string]: string; };
 	socket?: string;
 	connected: boolean;
+	picture: string;
 	getFullname: () => string;
 	setPassword: (password: string) => void;
 	verifyPassword: (password: string) => boolean;
@@ -22,9 +23,9 @@ const usersSchema = new Schema({
 	password: { type: String, required: true },
 	socket: { type: String },
 	connected: { type: Boolean },
+	picture: { type: String },
 	conversationSeen: Object
 });
-
 
 usersSchema.methods.getFullname = function () {
 	return `${this.firstname} ${this.lastname}`;
@@ -43,11 +44,11 @@ usersSchema.methods.updateSeen = function (conversationId: string, seenDate: str
 };
 
 //Type pour reponse client, sans pwd
-export type ISafeUsers = Pick<IUsers, '_id' | 'email' | 'lastname' | 'firstname' | 'conversationSeen' | 'connected'>;
+export type ISafeUsers = Pick<IUsers, '_id' | 'email' | 'lastname' | 'firstname' | 'conversationSeen' | 'connected' | 'picture'>;
 
 usersSchema.methods.getSafeUser = function (): ISafeUsers {
-	const { _id, email, lastname, firstname, conversationSeen, connected } = this;
-	return { _id, email, lastname, firstname, conversationSeen, connected };
+	const { _id, email, lastname, firstname, conversationSeen, connected, picture } = this;
+	return { _id, email, lastname, firstname, conversationSeen, connected, picture };
 };
 
 export const Users = model<IUsers, Model<IUsers>>("users", usersSchema);
