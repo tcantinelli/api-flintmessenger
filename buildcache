@@ -602,7 +602,7 @@
         "affectsGlobalScope": false
       },
       "./src/socket.ts": {
-        "version": "9feda755d8dcf10a59e75689348933044c28ed4505e5c2d188457954c957cf88",
+        "version": "53b36281fc71b20937a21e5c34d2f13d96aac32a40249d98e0c4389ad7daba96",
         "signature": "519c4a15a223b67e507d53387a6d74d0bf2e412df3821f76b3c9b422108efc9b",
         "affectsGlobalScope": false
       },
@@ -627,7 +627,7 @@
         "affectsGlobalScope": false
       },
       "./src/routes/authroutes.ts": {
-        "version": "ed66632b028118bd34181ca39b3dfec010a421b5f1e579ec10b6ec2b11f7e0fb",
+        "version": "60092c4b23fbc9b510363b9831fad44a8c6176cd3305a73dcf2243b3287c7206",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
         "affectsGlobalScope": false
       },
@@ -5503,7 +5503,19 @@
       "./src/middlewares/authenticationrequired.ts",
       "./src/models/messages.ts",
       "./src/models/users.ts",
-      "./src/routes/authroutes.ts",
+      [
+        "./src/routes/authroutes.ts",
+        [
+          {
+            "file": "./src/routes/authroutes.ts",
+            "start": 344,
+            "length": 9,
+            "messageText": "Module '\"../socket\"' has no exported member 'connectMe'.",
+            "category": 1,
+            "code": 2305
+          }
+        ]
+      ],
       "./src/routes/imagesroute.ts",
       "./src/routes/messagesroutes.ts",
       "./src/routes/usersroute.ts",

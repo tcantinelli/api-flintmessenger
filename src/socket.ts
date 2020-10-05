@@ -4,7 +4,7 @@ import passportSocketIo from 'passport.socketio';
 import { IConfig } from './config';
 import { Store } from 'express-session';
 import passport from 'passport';
-import { Users } from './models/users';
+import { IUsers, Users } from './models/users';
 import cookieParser from 'cookie-parser'
 
 const actives = new Set<Socket>();
@@ -42,8 +42,6 @@ async function connect(socket: Socket): Promise<void> {
 }
 
 async function disconnect(socket: Socket, _id: string): Promise<void> {
-	console.log('discoooonect');
-	
 	closeSocket(socket);
 	const user = await Users.findById(_id);
 	if (!user) return exitUserNotFound(_id);
