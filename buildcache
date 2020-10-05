@@ -552,8 +552,8 @@
         "affectsGlobalScope": false
       },
       "./src/models/users.ts": {
-        "version": "aa8048c654e05522c3c9ded0b4938a2888548aa00abfc18389aefaeb276f07c2",
-        "signature": "b61a24c2351fb9fa935c031036fe69536d79a7c73665475074342bb456a67dba",
+        "version": "e548cb516203cc6e6a74bbcfb756c1d0227a8c795b1ff721d5745d4baf99d25f",
+        "signature": "386b0c9f7d12620bcd1d0c5cc2b53e0b3e3b887bf8175b01124c16ec4996d80b",
         "affectsGlobalScope": false
       },
       "./src/controllers/authentification.ts": {
@@ -621,6 +621,11 @@
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
         "affectsGlobalScope": false
       },
+      "./src/routes/imagesroute.ts": {
+        "version": "7ef920cea8383cb278b33e5d0023902e93af150ef504564603dcee02732fa39d",
+        "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
+        "affectsGlobalScope": false
+      },
       "./src/routes/authroutes.ts": {
         "version": "ed66632b028118bd34181ca39b3dfec010a421b5f1e579ec10b6ec2b11f7e0fb",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
@@ -632,7 +637,7 @@
         "affectsGlobalScope": false
       },
       "./src/server.ts": {
-        "version": "d9ad1f35ea48cf9101d899f8ac7cb5ac1f391f1c276704b070087a95fc320503",
+        "version": "197d157cd0e55cccdb2f2e683974a2d9ca075e86bf017449b0565d609b8773ef",
         "signature": "81132659eb713e8c675e8ae4d5519199436a1c8c32e1e4240ab7879185679a4e",
         "affectsGlobalScope": false
       },
@@ -3157,6 +3162,19 @@
         "./src/models/users.ts",
         "./src/socket.ts"
       ],
+      "./src/routes/imagesroute.ts": [
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/graceful-fs/index.d.ts",
+        "./node_modules/@types/node/ts3.1/fs.d.ts",
+        "./node_modules/@types/node/ts3.1/path.d.ts",
+        "./node_modules/@types/node/ts3.1/process.d.ts",
+        "./node_modules/@types/node/ts3.1/util.d.ts",
+        "./node_modules/@types/node/ts3.4/fs.d.ts",
+        "./node_modules/@types/node/ts3.4/process.d.ts",
+        "./node_modules/@types/node/ts3.4/util.d.ts",
+        "./src/middlewares/authenticationrequired.ts",
+        "./src/models/users.ts"
+      ],
       "./src/routes/messagesroutes.ts": [
         "./node_modules/@types/express/index.d.ts",
         "./node_modules/@types/graceful-fs/index.d.ts",
@@ -3204,6 +3222,7 @@
         "./src/controllers/authentification.ts",
         "./src/database.ts",
         "./src/routes/authroutes.ts",
+        "./src/routes/imagesroute.ts",
         "./src/routes/messagesroutes.ts",
         "./src/routes/usersroute.ts",
         "./src/socket.ts"
@@ -5265,6 +5284,9 @@
       "./src/routes/authroutes.ts": [
         "./node_modules/@types/express-serve-static-core/index.d.ts"
       ],
+      "./src/routes/imagesroute.ts": [
+        "./node_modules/@types/express-serve-static-core/index.d.ts"
+      ],
       "./src/routes/messagesroutes.ts": [
         "./node_modules/@types/express-serve-static-core/index.d.ts"
       ],
@@ -5482,6 +5504,7 @@
       "./src/models/messages.ts",
       "./src/models/users.ts",
       "./src/routes/authroutes.ts",
+      "./src/routes/imagesroute.ts",
       "./src/routes/messagesroutes.ts",
       "./src/routes/usersroute.ts",
       "./src/server.ts",

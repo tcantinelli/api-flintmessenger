@@ -9,6 +9,7 @@ import { authenticationInitialize, authenticationSession } from './controllers/a
 
 import messagesRoutes from './routes/messagesRoutes';
 import usersRoutes from './routes/usersRoute';
+import imagesRoutes from './routes/imagesRoute';
 import authRoutes from './routes/authRoutes';
 
 import session from 'express-session';
@@ -64,6 +65,7 @@ export function createExpressApp(config: IConfig): express.Express {
 
 	app.use('/messages', messagesRoutes);
 	app.use('/users', usersRoutes);
+	app.use('/images', imagesRoutes);
 	app.use('/', authRoutes);
 
 	return app;
