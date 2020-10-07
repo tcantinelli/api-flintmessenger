@@ -7,8 +7,12 @@ const UsersController = {
 	},
 
 	async getUsers(): Promise<IUsers[]> {
-		const users = await Users.find({});
-		return users;
+		const connectedUsers = await Users.find({ connected: true }).sort({ firstname: 1 });
+		console.log(connectedUsers);
+
+		const disconnectedUsers = await Users.find({$or: [{ connected: { $exists: false}},  { connected: { $ne: true } }]}).sort({ firstname: 1 });
+		console.log(disconnectedUsers);
+		return connectedUsers.concat(disconnectedUsers);
 	},
 
 	async deleteUsers(userId: string): Promise<IUsers | null> {
@@ -16,13 +20,13 @@ const UsersController = {
 		return user;
 	},
 
-	async updateUsers(user: IUsers, email:string, firstname:string, lastname:string, password:string): Promise<IUsers | null> {
+	async updateUsers(user: IUsers, email: string, firstname: string, lastname: string, password: string): Promise<IUsers | null> {
 
 		user.email = email;
 		user.firstname = firstname;
 		user.lastname = lastname;
 
-		if(password.length > 0) user.setPassword(password);
+		if (password.length > 0) user.setPassword(password);
 
 		const upUser = await user.save();
 		return upUser;
