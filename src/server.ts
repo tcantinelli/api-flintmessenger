@@ -39,8 +39,8 @@ export function createExpressApp(config: IConfig): express.Express {
 		saveUninitialized: false,
 		store: sessionStore,
 		cookie: {
-			// secure: true,
-			// sameSite: 'none',
+			secure: true,
+			sameSite: 'none',
 			// domain: '.soapandsoft.dev'
 		},
 	}
@@ -50,8 +50,10 @@ export function createExpressApp(config: IConfig): express.Express {
 		app.set('trust proxy', 1); // trust first proxy
 		sessionConfig.cookie = {
 			// secure: true,
-			sameSite: 'lax',
-			domain: '.soapandsoft.dev'
+			// sameSite: 'lax',
+			// domain: '.soapandsoft.dev'
+			secure: true,
+			sameSite: 'none',
 		}
 	}
 	app.use(session(sessionConfig))
