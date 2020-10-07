@@ -72,6 +72,7 @@ router.get('/logout', authenticationRequired, async (req: Request, res: Response
 		}
 		else {
 			res.clearCookie('session_id');
+			res.clearCookie('io');
 			req.session = undefined;
 			//Stop socket connection
 			if (user.socket) io.sockets.sockets[user.socket].disconnect();
