@@ -37,6 +37,21 @@ const MessagesController = {
 		} catch (err) {
 			throw new Error();
 		};
+	},
+
+	async startConversationWithMia(newUserID: string): Promise<void> {
+		const miaID = '5f7d6c70c2f4b72c04a6bf3e';
+		const conversationId = Buffer.from([miaID, newUserID, new Date().toISOString()].join('_')).toString('base64');
+
+		const newMessage = new Messages({
+			conversationId,
+			targets: [miaID, newUserID],
+			createdAt: new Date(),
+			emitter: miaID,
+			content: "Bonjour, je suis Mia l'IA de Flint Messenger, je vous souhaite la bienvenue !"
+		});
+
+		await newMessage.save();
 	}
 
 }
