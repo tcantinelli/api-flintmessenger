@@ -1,0 +1,11 @@
+{
+  "PORT": 3050,
+  "express_debug": true,
+  "mongo_host": "cluster0.dbj1f.mongodb.net",
+  "mongo_user": "toto",
+  "mongo_pass": "myPwd",
+  "mongo_database": "flint-messenger",
+  "mongo_debug": true,
+  "session_cookie_name": "session_id",
+  "session_secret": "myScrete"
+}
