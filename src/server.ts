@@ -47,7 +47,7 @@ export function createExpressApp(config: IConfig): express.Express {
 		cookie: {
 			secure: true,
 			sameSite: 'none',
-			// domain: '.soapandsoft.dev'
+			domain: '.heroku.com'
 		},
 	}
 
@@ -64,7 +64,7 @@ export function createExpressApp(config: IConfig): express.Express {
 		sessionConfig.cookie = {
 			// secure: true,
 			// sameSite: 'lax',
-			// domain: '.soapandsoft.dev'
+			domain: '.heroku.com',
 			secure: true,
 			sameSite: 'none',
 		}
