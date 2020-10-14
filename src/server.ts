@@ -44,11 +44,11 @@ export function createExpressApp(config: IConfig): express.Express {
 		resave: false,
 		saveUninitialized: false,
 		store: sessionStore,
-		// cookie: {
-		// 	secure: true,
-		// 	sameSite: 'none',
-		// 	// domain: '.soapandsoft.dev'
-		// },
+		cookie: {
+			secure: true,
+			sameSite: 'none',
+			// domain: '.soapandsoft.dev'
+		},
 	}
 
 	app.use(function (req, res, next) {
