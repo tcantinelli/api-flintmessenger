@@ -50,7 +50,7 @@ export function createExpressApp(config: IConfig): express.Express {
 			// domain: '.herokuapp.com'
 			secure: false,
 			sameSite: 'lax',
-			domain: '.herokuapp.com',
+			// domain: '.herokuapp.com',
 			httpOnly: true
 		},
 	}
@@ -71,7 +71,7 @@ export function createExpressApp(config: IConfig): express.Express {
 			// sameSite: 'none',
 			secure: false,
 			sameSite: 'lax',
-			domain: '.herokuapp.com',
+			// domain: '.herokuapp.com',
 			httpOnly: true
 		}
 	}
