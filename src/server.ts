@@ -58,17 +58,17 @@ export function createExpressApp(config: IConfig): express.Express {
 
 
 
-	// if (process.env.NODE_ENV === 'production') {
-	// 	app.enable('trust proxy');
-	// 	app.set('trust proxy', 1); // trust first proxy
-	// 	sessionConfig.cookie = {
-	// 		// secure: true,
-	// 		// sameSite: 'lax',
-	// 		// domain: '.soapandsoft.dev'
-	// 		secure: true,
-	// 		sameSite: 'none',
-	// 	}
-	// }
+	if (process.env.NODE_ENV === 'production') {
+		app.enable('trust proxy');
+		app.set('trust proxy', 1); // trust first proxy
+		sessionConfig.cookie = {
+			// secure: true,
+			// sameSite: 'lax',
+			// domain: '.soapandsoft.dev'
+			secure: true,
+			sameSite: 'none',
+		}
+	}
 	app.use(session(sessionConfig))
 
 	app.use(authenticationInitialize());
