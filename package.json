@@ -49,7 +49,7 @@
   },
   "scripts": {
     "start": "node ./dist/server.js",
-    "build": "tsc --project tsconfig.json",
+    "build": "tsc --project tsconfig.json ; cp -r -f ./src/images ./dist/",
     "test": "jest",
     "dev-env": "nodemon"
   },
