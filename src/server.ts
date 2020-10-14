@@ -46,7 +46,7 @@ export function createExpressApp(config: IConfig): express.Express {
 		store: sessionStore,
 		cookie: {
 			secure: true,
-			sameSite: undefined,
+			sameSite: 'none',
 			// domain: '.soapandsoft.dev'
 		},
 	}
@@ -66,7 +66,7 @@ export function createExpressApp(config: IConfig): express.Express {
 			// sameSite: 'lax',
 			// domain: '.soapandsoft.dev'
 			secure: true,
-			sameSite: undefined,
+			sameSite: 'none',
 		}
 	}
 	app.use(session(sessionConfig))
