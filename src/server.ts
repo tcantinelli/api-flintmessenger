@@ -45,9 +45,13 @@ export function createExpressApp(config: IConfig): express.Express {
 		saveUninitialized: false,
 		store: sessionStore,
 		cookie: {
-			secure: true,
-			sameSite: 'none',
-			domain: '.herokuapp.com'
+			// secure: true,
+			// sameSite: 'none',
+			// domain: '.herokuapp.com'
+			secure: false,
+			sameSite: 'lax',
+			domain: '.herokuapp.com',
+			httpOnly: true
 		},
 	}
 
@@ -62,11 +66,13 @@ export function createExpressApp(config: IConfig): express.Express {
 		app.enable('trust proxy');
 		app.set('trust proxy', 1); // trust first proxy
 		sessionConfig.cookie = {
+			// domain: '.herokuapp.com',
 			// secure: true,
-			// sameSite: 'lax',
+			// sameSite: 'none',
+			secure: false,
+			sameSite: 'lax',
 			domain: '.herokuapp.com',
-			secure: true,
-			sameSite: 'none',
+			httpOnly: true
 		}
 	}
 	app.use(session(sessionConfig))
