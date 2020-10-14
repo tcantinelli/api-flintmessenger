@@ -16,6 +16,9 @@ import session from 'express-session';
 import connectMongo from 'connect-mongo';
 import mongoose from 'mongoose';
 import { initializeSockets } from './socket';
+
+import useragent from 'express-useragent';
+
 const MongoStore = connectMongo(session);
 const sessionStore = new MongoStore({ mongooseConnection: mongoose.connection })
 
@@ -32,6 +35,9 @@ export function createExpressApp(config: IConfig): express.Express {
 		origin: true
 	}));
 
+	//Pour identifier browser
+	app.use(useragent.express());
+
 	const sessionConfig: session.SessionOptions = {
 		name: session_cookie_name,
 		secret: session_secret,
@@ -40,22 +46,29 @@ export function createExpressApp(config: IConfig): express.Express {
 		store: sessionStore,
 		cookie: {
 			secure: true,
-			sameSite: 'none',
+			sameSite: false,
 			// domain: '.soapandsoft.dev'
 		},
 	}
 
-	if (process.env.NODE_ENV === 'production') {
-		app.enable('trust proxy');
-		app.set('trust proxy', 1); // trust first proxy
-		sessionConfig.cookie = {
-			// secure: true,
-			// sameSite: 'lax',
-			// domain: '.soapandsoft.dev'
-			secure: true,
-			sameSite: 'none',
-		}
-	}
+	app.use(function (req, res, next) {
+		console.log(req.useragent);
+		next();
+	  });
+
+
+
+	// if (process.env.NODE_ENV === 'production') {
+	// 	app.enable('trust proxy');
+	// 	app.set('trust proxy', 1); // trust first proxy
+	// 	sessionConfig.cookie = {
+	// 		// secure: true,
+	// 		// sameSite: 'lax',
+	// 		// domain: '.soapandsoft.dev'
+	// 		secure: true,
+	// 		sameSite: 'none',
+	// 	}
+	// }
 	app.use(session(sessionConfig))
 
 	app.use(authenticationInitialize());

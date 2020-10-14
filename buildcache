@@ -571,11 +571,6 @@
         "signature": "b010379689455ef401fc7a74feb864a16cb31ff690e0a72e60a3678649ac53ff",
         "affectsGlobalScope": false
       },
-      "./src/controllers/messages.ts": {
-        "version": "c4c921d21f1d8bd3df108025e94973b35d1eab13ca2d9910b2eacbf143a06690",
-        "signature": "14063436f2921ceb39164e6cbfc2bdd3f0176985cf0f5eaf9aa44c169fc5d6c2",
-        "affectsGlobalScope": false
-      },
       "./node_modules/@types/engine.io/index.d.ts": {
         "version": "2bc5a885dc91b4006192c477dfae4f2856e5809c6ffbf62cc242ac010f15ab51",
         "signature": "2bc5a885dc91b4006192c477dfae4f2856e5809c6ffbf62cc242ac010f15ab51",
@@ -606,14 +601,19 @@
         "signature": "519c4a15a223b67e507d53387a6d74d0bf2e412df3821f76b3c9b422108efc9b",
         "affectsGlobalScope": false
       },
-      "./src/routes/messagesroutes.ts": {
-        "version": "3a29648aa5b38affa9bf20c5715b464060c6ac8a07638204207d141a228ac573",
-        "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
+      "./src/controllers/users.ts": {
+        "version": "494022e36e98b1312e5b91c389ae98a3ed2b778d2a7711717329abec68168a17",
+        "signature": "65c177737d5c4cea07fe8b120d8f9ae8db74678509d38c87172394287b69e156",
         "affectsGlobalScope": false
       },
-      "./src/controllers/users.ts": {
-        "version": "1f91be0b546dfb58999483b921cb1e4e46e7b495f30edcbb5f0bfb07816e8f93",
-        "signature": "65c177737d5c4cea07fe8b120d8f9ae8db74678509d38c87172394287b69e156",
+      "./src/controllers/messages.ts": {
+        "version": "9d5be57aebd793e4b9061304c2350da2976972f92affadde7a0c5af3aa9ba1ca",
+        "signature": "26bfc63208c48e380d9894ba073c92f78c6aece196aef66a444f8522a6c3ba8f",
+        "affectsGlobalScope": false
+      },
+      "./src/routes/messagesroutes.ts": {
+        "version": "6008439f546d533b4c5ea8b81e8e70a06e7e32f45c19134e36ee14ada4529212",
+        "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
         "affectsGlobalScope": false
       },
       "./src/routes/usersroute.ts": {
@@ -627,7 +627,7 @@
         "affectsGlobalScope": false
       },
       "./src/routes/authroutes.ts": {
-        "version": "60092c4b23fbc9b510363b9831fad44a8c6176cd3305a73dcf2243b3287c7206",
+        "version": "395903252f5f6cd3752a084481b045a9ce37516c73f91ce3ec36cde2e56fd8cc",
         "signature": "0747134fc57c8e4a12d6144952ae1f47f54848f1ca110e997bd81ec1cc7b76e6",
         "affectsGlobalScope": false
       },
@@ -636,8 +636,13 @@
         "signature": "e8c80d24feb0124e305813adef906ac90d31d2bbe131327b3a3434726f3ad48c",
         "affectsGlobalScope": false
       },
+      "./node_modules/@types/express-useragent/index.d.ts": {
+        "version": "0305b02d9279b5c6badb8862cdf87139ec4442defcf21f0d0b8b39ba6677714f",
+        "signature": "0305b02d9279b5c6badb8862cdf87139ec4442defcf21f0d0b8b39ba6677714f",
+        "affectsGlobalScope": true
+      },
       "./src/server.ts": {
-        "version": "197d157cd0e55cccdb2f2e683974a2d9ca075e86bf017449b0565d609b8773ef",
+        "version": "6cca1d7f89f6d900cded5a0373e47990d0213ce05ac623393065e562c5afef95",
         "signature": "81132659eb713e8c675e8ae4d5519199436a1c8c32e1e4240ab7879185679a4e",
         "affectsGlobalScope": false
       },
@@ -1242,6 +1247,16 @@
         "./node_modules/@types/graceful-fs/index.d.ts",
         "./node_modules/@types/node/index.d.ts",
         "./node_modules/@types/node/ts3.1/events.d.ts",
+        "./node_modules/@types/node/ts3.1/fs.d.ts",
+        "./node_modules/@types/node/ts3.1/process.d.ts",
+        "./node_modules/@types/node/ts3.1/util.d.ts",
+        "./node_modules/@types/node/ts3.4/fs.d.ts",
+        "./node_modules/@types/node/ts3.4/process.d.ts",
+        "./node_modules/@types/node/ts3.4/util.d.ts"
+      ],
+      "./node_modules/@types/express-useragent/index.d.ts": [
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/graceful-fs/index.d.ts",
         "./node_modules/@types/node/ts3.1/fs.d.ts",
         "./node_modules/@types/node/ts3.1/process.d.ts",
         "./node_modules/@types/node/ts3.1/util.d.ts",
@@ -3091,8 +3106,10 @@
         "./node_modules/@types/node/ts3.4/fs.d.ts",
         "./node_modules/@types/node/ts3.4/process.d.ts",
         "./node_modules/@types/node/ts3.4/util.d.ts",
+        "./src/controllers/users.ts",
         "./src/models/messages.ts",
-        "./src/models/users.ts"
+        "./src/models/users.ts",
+        "./src/socket.ts"
       ],
       "./src/controllers/users.ts": [
         "./node_modules/@types/graceful-fs/index.d.ts",
@@ -3102,6 +3119,7 @@
         "./node_modules/@types/node/ts3.4/fs.d.ts",
         "./node_modules/@types/node/ts3.4/process.d.ts",
         "./node_modules/@types/node/ts3.4/util.d.ts",
+        "./src/controllers/messages.ts",
         "./src/models/users.ts"
       ],
       "./src/database.ts": [
@@ -3206,6 +3224,7 @@
       "./src/server.ts": [
         "./node_modules/@types/cors/index.d.ts",
         "./node_modules/@types/express-session/index.d.ts",
+        "./node_modules/@types/express-useragent/index.d.ts",
         "./node_modules/@types/express/index.d.ts",
         "./node_modules/@types/graceful-fs/index.d.ts",
         "./node_modules/@types/helmet/index.d.ts",
@@ -3442,6 +3461,16 @@
         "./node_modules/@types/graceful-fs/index.d.ts",
         "./node_modules/@types/node/index.d.ts",
         "./node_modules/@types/node/ts3.1/events.d.ts",
+        "./node_modules/@types/node/ts3.1/fs.d.ts",
+        "./node_modules/@types/node/ts3.1/process.d.ts",
+        "./node_modules/@types/node/ts3.1/util.d.ts",
+        "./node_modules/@types/node/ts3.4/fs.d.ts",
+        "./node_modules/@types/node/ts3.4/process.d.ts",
+        "./node_modules/@types/node/ts3.4/util.d.ts"
+      ],
+      "./node_modules/@types/express-useragent/index.d.ts": [
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/graceful-fs/index.d.ts",
         "./node_modules/@types/node/ts3.1/fs.d.ts",
         "./node_modules/@types/node/ts3.1/process.d.ts",
         "./node_modules/@types/node/ts3.1/util.d.ts",
@@ -5324,6 +5353,7 @@
       "./node_modules/@types/engine.io/index.d.ts",
       "./node_modules/@types/express-serve-static-core/index.d.ts",
       "./node_modules/@types/express-session/index.d.ts",
+      "./node_modules/@types/express-useragent/index.d.ts",
       "./node_modules/@types/express/index.d.ts",
       "./node_modules/@types/find-cache-dir/index.d.ts",
       "./node_modules/@types/find-package-json/index.d.ts",
@@ -5503,19 +5533,7 @@
       "./src/middlewares/authenticationrequired.ts",
       "./src/models/messages.ts",
       "./src/models/users.ts",
-      [
-        "./src/routes/authroutes.ts",
-        [
-          {
-            "file": "./src/routes/authroutes.ts",
-            "start": 344,
-            "length": 9,
-            "messageText": "Module '\"../socket\"' has no exported member 'connectMe'.",
-            "category": 1,
-            "code": 2305
-          }
-        ]
-      ],
+      "./src/routes/authroutes.ts",
       "./src/routes/imagesroute.ts",
       "./src/routes/messagesroutes.ts",
       "./src/routes/usersroute.ts",
